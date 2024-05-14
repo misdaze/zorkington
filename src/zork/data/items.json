@@ -1,14 +1,30 @@
 {
 "items":[
     {
-        "id":"lol",
+        "id":"person",
         "name":"damn",
         "description":"jjj",
-        "room_id":"loool",
+        "room_id":"Hallway",
         "weight":"5",
         "isOpenable":"false"
     },
     {
+        "id":"Chest",
+        "name":"a bid chest",
+        "description":"big chest",
+        "room_id":"Bedroom",
+        "weight":"10000",
+        "isOpenable":"true",
+        "islockable":"false"
+
+    },
+    {
+        "id":"person2",
+        "name":"damnn",
+        "description":"jjjd",
+        "item_id":"Chest",
+        "weight":"6",
+        "isOpenable":"false"
 
     },
     {
