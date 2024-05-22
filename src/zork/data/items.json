@@ -2,7 +2,7 @@
     "items":[
         {
         "id": "shortsword",
-        "name": "Short Sword",
+        "name": "Shortsword",
         "description": "A small, damaged sword.",
         "room_id":"Hallway",
         "weight":"10",
@@ -10,16 +10,16 @@
         },
         {
         "id": "longsword",
-        "name": "A long iron sword.",
-        "description": "A paper straw.",
+        "name": "Longsword",
+        "description": "A long iron sword.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
         },
         {
-        "id": "longsword",
-        "name": "A long iron sword.",
-        "description": "A paper straw.",
+        "id": "ironspear",
+        "name": "Iron Spear",
+        "description": "A long iron spear.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"

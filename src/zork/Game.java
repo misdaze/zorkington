@@ -28,6 +28,7 @@ public class Game {
       e.printStackTrace();
     }
     parser = new Parser();
+
   }
 
   private void initItems(String fileName) throws Exception {
@@ -36,13 +37,17 @@ public class Game {
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 94a834d4dbd409f57de98babd6cca134f543dd84
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
 
+    
     JSONArray jsonRooms = (JSONArray) json.get("rooms");
 
     for (Object roomObj : jsonRooms) {
