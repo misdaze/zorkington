@@ -1,0 +1,60 @@
+{
+    "items":[
+        {
+        "id": "shortsword",
+        "name": "Short Sword",
+        "description": "A small, damaged sword.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "longsword",
+        "name": "A long iron sword.",
+        "description": "A paper straw.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "longsword",
+        "name": "A long iron sword.",
+        "description": "A paper straw.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "shortsword",
+        "name": "Short Sword",
+        "description": "A small, damaged sword.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "longsword",
+        "name": "A long iron sword.",
+        "description": "A paper straw.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "longsword",
+        "name": "A long iron sword.",
+        "description": "A paper straw.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+
+        {
+        "id": "bigChest",
+        "name": "Large Chest",
+        "description": "A large chest",
+        "room_id":"Hallway",
+        "weight" : "1000000000000"
+        }
+    ]
+}
