@@ -1,48 +1,76 @@
 {
   "rooms": [
     {
-      "id": "Hallway",
-      "name": "Hallway",
-      "description": "You are in a long hallway. There are family pictures on all of the walls.",
+      "id": "Courtyard",
+      "name": "Courtyard",
+      "description": "Have fun!",
       "exits": [
         {
           "isLocked": false,
           "direction": "North",
-          "adjacentRoom": "Bedroom"
+          "adjacentRoom": "Level 1 Entrance"
         },
         {
-          "isLocked": true,
-          "direction": "East",
-          "adjacentRoom": "Bathroom",
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Level 1 Stairway",
           "keyId": "1234"
         }
       ]
     },
     {
-      "id": "Bedroom",
-      "name": "Bedroom",
-      "description": "You are in a large bedroom",
+      "id": "Entrance",
+      "name": "Level 1 Entrance",
+      "description": "You are in a dungeon",
       "exits": [
         {
           "isLocked": false,
-          "direction": "South",
-          "adjacentRoom": "Hallway"
-        },
-        {
-          "isLocked": false,
-          "direction": "SouthEast",
-          "adjacentRoom": "Bathroom"
-        },
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Closet"
+          "direction": "Northeast",
+          "adjacentRoom": "Level 1 Entrance Door"
         }
       ]
     },
     {
-      "id": "Bathroom",
-      "name": "Bathroom",
+    "id": "Entrance",
+      "name": "Level 1 Entrance Door",
+      "description": "You are in a dungeon",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "SouthWest",
+          "adjacentRoom": "Kitchen"
+        }
+      ]
+      }, 
+      {
+      "id": "Kitchen",
+      "name": "Kitchen",
+      "description": "You are in a dungeon",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Level 1 Courtyard"
+        }
+      ]
+      }, 
+      {
+        "id": "Courtyard",
+        "name": "Level 1 Courtyard",
+        "description": "You are in a dungeon",
+        "exits": [
+          {
+            "isLocked": true,
+            "direction": "Northeast",
+            "adjacentRoom": "Counter-Magic Door"
+          }
+        ]
+        }, 
+///////////////////////////////////////
+
+      {
+      "id": "Stairway",
+      "name": "Level 1 Stairway",
       "description": "You are in a blue bathroom",
       "exits": [
         {
