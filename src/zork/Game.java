@@ -37,10 +37,8 @@ public class Game {
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 94a834d4dbd409f57de98babd6cca134f543dd84
+  
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
@@ -74,6 +72,20 @@ public class Game {
     }
   }
 
+ private void initItems(String itemFileName) throws Exception{
+  Path itempath = Path.of(itemFileName);
+  String itemJsonString = Files.readString(itempath);
+  JSONParser itemparser = new JSONParser(); 
+  JSONObject itemjson = (JSONObject) itemparser.parse(itemJsonString);
+
+  JSONArray jsonitems = (JSONArray) itemjson.get("items");
+
+  for(Object itemObj : jsonitems){
+    OpenableObject item = new Item(0, itemJsonString, false);
+    int weight = (int) ((JSONObject) itemObj).get("weight");
+    
+  }
+ } 
   /**
    * Main play routine. Loops until end of play.
    */

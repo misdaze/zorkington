@@ -55,6 +55,54 @@
         "description": "A large chest",
         "room_id":"Hallway",
         "weight" : "1000000000000"
+        },
+        {
+        "id": "cheese",
+        "name": "Cheese",
+        "description": "An old piece of cheese.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "egg",
+        "name": "Egg",
+        "description": "Somehow, it has survived being down here this long.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "carrot",
+        "name": "Carrot",
+        "description": "The bare minimum of edible.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "drymeat",
+        "name": "Dried Meat",
+        "description": "A strip of jerky",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "tomato",
+        "name": "Tomato",
+        "description": "The color of the tomato is a little pale, suggesting it hasn't seen much sun.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "turnip",
+        "name": "Turnip",
+        "description": "A root vegetable commonly grown in all around Europa. The taste is rather bland.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "moss",
+        "name": "Cave Moss",
+        "description": "Dense moss that grows in most caves. Might be edible.",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "cheese",
+        "name": "Cheese",
+        "description": "An old piece of cheese.",
+        "room_id": "Hallway"
         }
     ]
 }
