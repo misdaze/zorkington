@@ -23,12 +23,42 @@ public class Game {
     try {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
+      initNPCs("src\\zork\\data\\npcs.json");
+
       currentRoom = roomMap.get("Bedroom");
     } catch (Exception e) {
       e.printStackTrace();
     }
     parser = new Parser();
 
+  }
+
+  private void initNPCs(String fileName) throws Exception {
+    Path path = Path.of(fileName);
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    
+    JSONArray jsonNPCs = (JSONArray) json.get("npcs");
+
+    for (Object npcObj : jsonNPCs) {
+      String name = (String) ((JSONObject) npcObj).get("name");
+      String roomId = (String) ((JSONObject) npcObj).get("room_id");
+      String description = (String) ((JSONObject) npcObj).get("description");
+      String npcType = (String) ((JSONObject) npcObj).get("type");
+      String aglity = (String) ((JSONObject) npcObj).get("aglity");
+      String health = (String) ((JSONObject) npcObj).get("health");
+
+    if (npcType.equals("0")){
+      Hostile hostile = new Hostile(name, description, 0, 0);
+    }
+
+    else {
+      Trader trader = new Trader(name, description);
+    }
+     
+    }
   }
 
   private void initItems(String fileName) throws Exception {

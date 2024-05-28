@@ -8,13 +8,14 @@
         {
           "isLocked": false,
           "direction": "North",
-          "adjacentRoom": "Level 1 Entrance"
+          "adjacentRoom": "Level 1 Entrance",
+          "keyId": "1entrance"
         },
         {
           "isLocked": false,
           "direction": "West",
           "adjacentRoom": "Level 1 Stairway",
-          "keyId": "1234"
+          "keyId": "1stairway"
         }
       ]
     },
@@ -27,6 +28,12 @@
           "isLocked": false,
           "direction": "Northeast",
           "adjacentRoom": "Level 1 Entrance Door"
+
+        },
+        {
+          "isLocked": false,
+          "direction": "NorthWest",
+          "adjacentRoom": " Level 1 Storage "
         }
       ]
     },
@@ -63,10 +70,29 @@
             "isLocked": true,
             "direction": "Northeast",
             "adjacentRoom": "Counter-Magic Door"
+          },
+          {
+            "isLocked": false,
+            "direction": "North",
+            "adjacentRoom": "Counter-Magic Door"
           }
         ]
-        }, 
-///////////////////////////////////////
+
+
+      }, 
+      {
+        "id": "Inner Hall",
+        "name": "Inner Hall",
+        "description": "It might be still possible to escape these dungeons",
+        "exits": [
+          {
+
+
+          }
+
+        ]
+      },
+
 
       {
       "id": "Stairway",
@@ -74,29 +100,55 @@
       "description": "You are in a blue bathroom",
       "exits": [
         {
+          "isLocked": false,
+          "direction": "NorthWest",
+          "adjacentRoom": "Fly Room"
+          
+        }
+    
+      ]
+
+    },
+    {
+      "id": "Fly Room",
+      "name": "Closet",
+      "description": "It is dark.",
+      "exits": [
+        {
           "isLocked": true,
-          "direction": "West",
-          "adjacentRoom": "Hallway",
-          "keyId": "1234"
+          "direction": "Northeast",
+          "adjacentRoom": "Locked Room",
+          "keyId": "chestKey"
+
         },
+
         {
           "isLocked": false,
           "direction": "NorthWest",
-          "adjacentRoom": "Bedroom"
+          "adjacentRoom": "Hallway"
+        },
+
+        {
+          "isLocked": true,
+          "direction": "North",
+          "adjacentRoom": "Room"
+          
+
         }
+
+      
       ]
     },
-    {
-      "id": "Closet",
-      "name": "Closet",
-      "description": "You are in the closet. It is dark.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Bedroom"
-        }
+      {
+        "id": "Locked Room",
+        "name": "Lockey Room",
+        "description": "An ameoba awaits",
+        "exits": [
+
+
+
       ]
-    }
+      }
+    
   ]
 }
