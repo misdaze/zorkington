@@ -1,0 +1,188 @@
+{
+    "items":[
+        {
+        "id": "shortsword",
+        "name": "Shortsword",
+        "description": "A small, damaged sword. Gets the job done.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "longsword",
+        "name": "Longsword",
+        "description": "A long iron sword. The balance of the blade feels good.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "ironspear",
+        "name": "Iron Spear",
+        "description": "A long iron spear.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "shortbow",
+        "name": "Short Bow",
+        "description": "A compact and lightweight bow.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "scimitar",
+        "name": "Scimitar",
+        "description": "A short curved sword capable of causing deep slash wounds.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "ironmace",
+        "name": "Iron Mace",
+        "description": "A small, rusty iron mace capable of staggering those hit by it.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "cleaver",
+        "name": "Cleaver",
+        "description": "A short, rusty meat cleaver. Weak but intimidating.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "morningstar",
+        "name": "Morningstar",
+        "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {        
+        "id": "boneshears",
+        "name": "Bone Shears",
+        "description": "Rusty scissors that are a little hard to use. Slow but capable of causing immense damage.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },  
+        {
+        "id": "ritualspear",
+        "name": "Ritual Spear",
+        "description": "A simple spear used by primitive tribes living underground.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },  
+        {
+        "id": "axe",
+        "name": "Axe",
+        "description": "A typical multi-purpose hand axe.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "sharktooth",
+        "name": "Shark Teeth",
+        "description": "A crude makeshift saw made from razor-sharp teeth.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "warscythe",
+        "name": "Shark Teeth",
+        "description": "A large scythe. Capable of damaging multiple enemies at once.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "claymore",
+        "name": "Claymore",
+        "description": "A large two handed sword. Packs a punch.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "id": "easternsword",
+        "name": "Eastern Sword",
+        "description": "A delicate blade hailing from the far east. Sharp but fragile.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },  
+        {
+        "id": "bluesin",
+        "name": "Blue Sin",
+        "description": "A fine and light short sword with blue carvings on its hilt and blade.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "skeleton",
+        "name": "Skeletal Arm",
+        "description": "An arm taken from a skeleton. Why would you want to use this?",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "crudesword",
+        "name": "Crude Sword",
+        "description": "A massive jagged longsword. How do you even hold this thing?",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "sergal",
+        "name": "Sergal Spear",
+        "description": "A heavy throwing spear used by sergal tribes from the west.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "miasma",
+        "name": "Miasma",
+        "description": "An otherworldly sword that oozes toxic gases. The sword is said to house the strength of six men.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        }
+
+
+
+
+
+
+
+
+
+    ]
+}
