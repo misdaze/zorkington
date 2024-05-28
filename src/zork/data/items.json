@@ -4,7 +4,7 @@
         "id": "shortsword",
         "name": "Shortsword",
         "description": "A small, damaged sword. Gets the job done.",
-        "room_id":"Hallway",
+        "room_id":"Courtyard",
         "weight":"10",
         "isOpenable":"false",
         "isCursable":"true"
@@ -58,7 +58,7 @@
         "id": "cleaver",
         "name": "Cleaver",
         "description": "A short, rusty meat cleaver. Weak but intimidating.",
-        "room_id":"Hallway",
+        "item_id":"drawer1",
         "weight":"10",
         "isOpenable":"false",
         "isCursable":"true"
@@ -205,7 +205,7 @@
         "id": "silver",
         "name": "Silver Coin",
         "description": "A silver coin. It's valuable on the surface, but you might be able to use it down here too.",
-        "room_id":"Hallway",
+        "item_id":"cabinet1",
         "weight":"10",
         "isOpenable":"false"
         },
@@ -220,7 +220,7 @@
         {
         "id": "HealPot",
         "name": "Potion of Healing",
-        "description": "A miraculous concoction that heals your body completely..",
+        "description": "A miraculous concoction that heals your body completely.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
@@ -234,10 +234,10 @@
         "isOpenable":"false"
         },
         {
-        "id": "",
-        "name": "Morningstar",
-        "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
-        "room_id":"Hallway",
+        "id": "StrengthPot",
+        "name": "Potion of Strength",
+        "description": "A strong-smelling vial that strengthens your body.",
+        "room_id":"cabinet1",
         "weight":"10",
         "isOpenable":"false"
         },
@@ -333,14 +333,29 @@
         {
         "id": "crown",
         "name": "King's Crown",
-        "description": "An golden crown with ornate enscriptions and jewels embedded all over. It must be worth fortunes.",
+        "description": "A golden crown with ornate enscriptions and jewels embedded all over. It must be worth fortunes.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
+        },
+
+
+        {
+        "id": "cabinet1",
+        "name": "Kitchen Cabinet",
+        "description": "A damaged wooden cabinet. Who knows what's inside?",
+        "room_id": "1kitchen",
+        "weight":"10000",
+        "isOpenable": "true"
+        },
+        {
+        "id": "drawer1",
+        "name": "Kitchen Drawer",
+        "description": "A run-down drawer. Who knows what's inside?",
+        "room_id": "1kitchen",
+        "weight":"10000",
+        "isOpenable": "true"
         }
-
-
-
 
 
 
