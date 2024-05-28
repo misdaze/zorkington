@@ -7,9 +7,14 @@ public class Room {
   private String roomName;
   private String description;
   private ArrayList<Exit> exits;
+  private Inventory inventory;
 
   public ArrayList<Exit> getExits() {
     return exits;
+  }
+
+  public Inventory getInventory(){
+    return inventory;
   }
 
   public void setExits(ArrayList<Exit> exits) {
@@ -29,6 +34,7 @@ public class Room {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";
     exits = new ArrayList<Exit>();
+    inventory = new Inventory(Integer.MAX_VALUE);
   }
 
   public void addExit(Exit exit) throws Exception {

@@ -30,14 +30,6 @@ public class Game {
     parser = new Parser();
 
   }
-
-  private void initItems(String fileName) throws Exception {
-    Path path = Path.of(fileName);
-    String jsonString = Files.readString(path);
-    JSONParser parser = new JSONParser();
-    JSONObject json = (JSONObject) parser.parse(jsonString);
-  }
-
   
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
@@ -69,22 +61,31 @@ public class Game {
       }
       room.setExits(exits);
       roomMap.put(roomId, room);
+      System.out.println(roomName);
     }
   }
 
  private void initItems(String itemFileName) throws Exception{
-  Path itempath = Path.of(itemFileName);
-  String itemJsonString = Files.readString(itempath);
-  JSONParser itemparser = new JSONParser(); 
-  JSONObject itemjson = (JSONObject) itemparser.parse(itemJsonString);
+  Path path = Path.of(itemFileName);
+  String JsonString = Files.readString(path);
+  JSONParser parser = new JSONParser(); 
+  JSONObject json = (JSONObject) parser.parse(JsonString);
 
-  JSONArray jsonitems = (JSONArray) itemjson.get("items");
+  JSONArray jsonitems = (JSONArray) json.get("items");
 
   for(Object itemObj : jsonitems){
-    OpenableObject item = new Item(0, itemJsonString, false);
-    int weight = (int) ((JSONObject) itemObj).get("weight");
-    
-  }
+    String id = (String) ((JSONObject) itemObj).get("id");
+    String name = (String) ((JSONObject) itemObj).get("name");
+    String desc = (String) ((JSONObject) itemObj).get("description");
+    String room_id = (String) ((JSONObject) itemObj).get("room_id");
+
+    int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
+    Boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
+
+    Item item = new Item(weight, name, isOpenable);
+    if (room_id != null)
+      roomMap.get(room_id).getInventory().addItem(item);
+}
  } 
   /**
    * Main play routine. Loops until end of play.
