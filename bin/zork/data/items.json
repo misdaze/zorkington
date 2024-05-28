@@ -56,53 +56,205 @@
         "room_id":"Hallway",
         "weight" : "1000000000000"
         },
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
         {
         "id": "cheese",
+        "type": "food",
         "name": "Cheese",
         "description": "An old piece of cheese.",
+        "weight":"3",
         "room_id": "Hallway"
         },
         {
         "id": "egg",
+        "type": "food",
         "name": "Egg",
         "description": "Somehow, it has survived being down here this long.",
+        "weight":"1",
         "room_id": "Hallway"
         },
         {
         "id": "carrot",
+        "type": "food",
         "name": "Carrot",
         "description": "The bare minimum of edible.",
+        "weight":"2",
         "room_id": "Hallway"
         },
         {
         "id": "drymeat",
+        "type": "food",
         "name": "Dried Meat",
         "description": "A strip of jerky",
+        "weight":"3",
         "room_id": "Hallway"
         },
         {
         "id": "tomato",
+        "type": "food",
         "name": "Tomato",
         "description": "The color of the tomato is a little pale, suggesting it hasn't seen much sun.",
+        "weight":"1",
         "room_id": "Hallway"
         },
         {
         "id": "turnip",
+        "type": "food",
         "name": "Turnip",
         "description": "A root vegetable commonly grown in all around Europa. The taste is rather bland.",
+        "weight":"1",
         "room_id": "Hallway"
         },
         {
         "id": "moss",
+        "type": "food",
         "name": "Cave Moss",
         "description": "Dense moss that grows in most caves. Might be edible.",
+        "weight":"1",
         "room_id": "Hallway"
         },
         {
-        "id": "cheese",
-        "name": "Cheese",
-        "description": "An old piece of cheese.",
+        "id": "bread",
+        "type": "food",
+        "name": "Moldy Bread",
+        "description": "It has a little bit of mold on it. Might be edible.",
+        "weight":"2",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "arm",
+        "type": "food",
+        "name": "Arm",
+        "description": "Technically edible..?",
+        "weight":"5",
+        "room_id": "Hallway"
+        },
+        {
+        "id": "arm",
+        "type": "food",
+        "name": "Arm",
+        "description": "Technically edible..?",
+        "weight":"3",
         "room_id": "Hallway"
         }
+
     ]
 }
