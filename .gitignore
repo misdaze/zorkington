@@ -1,0 +1,4 @@
+bin/zork/Command.class
+bin/zork/*.class
+bin/zork/Game.class
+bin/zork/Key.class

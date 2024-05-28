@@ -7,7 +7,9 @@ public class Room {
   private String roomName;
   private String description;
   private ArrayList<Exit> exits;
+  private ArrayList<NPC> npcs;
 
+  
   public ArrayList<Exit> getExits() {
     return exits;
   }
@@ -23,12 +25,15 @@ public class Room {
   public Room(String description) {
     this.description = description;
     exits = new ArrayList<Exit>();
+    npcs = new ArrayList<NPC>();
   }
 
   public Room() {
     roomName = "DEFAULT ROOM";
     description = "DEFAULT DESCRIPTION";
     exits = new ArrayList<Exit>();
+    npcs = new ArrayList<NPC>();
+
   }
 
   public void addExit(Exit exit) throws Exception {
@@ -77,7 +82,10 @@ public class Room {
           String adjacentRoom = exit.getAdjacentRoom();
 
           return Game.roomMap.get(adjacentRoom);
+        }else{
+          return null;
         }
+        
 
       }
     } catch (IllegalArgumentException ex) {
@@ -89,13 +97,13 @@ public class Room {
     return null;
   }
 
-  /*
-   * private int getDirectionIndex(String direction) { int dirIndex = 0; for
-   * (String dir : directions) { if (dir.equals(direction)) return dirIndex; else
-   * dirIndex++; }
-   * 
-   * throw new IllegalArgumentException("Invalid Direction"); }
-   */
+  
+    //private int getDirectionIndex(String direction) { int dirIndex = 0; for
+    //(String dir : directions) { if (dir.equals(direction)) return dirIndex; else
+    //dirIndex++; }
+    
+    //throw new IllegalArgumentException("Invalid Direction"); }
+   
   public String getRoomName() {
     return roomName;
   }
