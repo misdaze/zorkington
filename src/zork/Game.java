@@ -15,6 +15,11 @@ public class Game {
 
   private Parser parser;
   private Room currentRoom;
+  private int healthPoints = 100;
+  private int hunger = 100;
+  private int sanity = 100;
+  private String wellbeingHunger = "Perfect";
+  private String wellbeingSanity = "Perfect";
 
   /**
    * Create the game and initialise its internal map.
@@ -28,6 +33,7 @@ public class Game {
     }
     parser = new Parser();
   }
+
 
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
@@ -108,6 +114,8 @@ public class Game {
       printHelp();
     else if (commandWord.equals("go"))
       goRoom(command);
+    else if (commandWord.equals("status"))
+      stati(command);
     else if (commandWord.equals("quit")) {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
@@ -132,6 +140,64 @@ public class Game {
     System.out.println("Your command words are:");
     parser.showCommands();
   }
+  public int getKeyStats(String statusInput){
+    if (statusInput == "Hunger"){
+      return hunger;
+    }
+    else if (statusInput == "Sanity"){
+      return sanity;
+    }
+    else if (statusInput == "Health"){
+      return healthPoints;
+    }
+    return 0;
+  }
+  private int finalHungerTick(){
+    if (wellbeingHunger == "Ravenous"){
+      return (int)((Math.random()*25)+15);
+    }
+    return 0;
+  }
+
+  public String hungerStatus(){
+    if (hunger >= 95){
+      wellbeingHunger = "Perfect";
+      return "You feel sated.";
+    }
+    else if (hunger >= 55){
+      wellbeingHunger = "Decent";
+      return "You could go for a snack.";
+    }
+    else if (hunger >= 35){
+      wellbeingHunger = "Hungry";
+      return "You are hungry. Eat soon.";
+    }
+    else if (hunger >= 5){
+      wellbeingHunger = "Starving";
+      return "You are starving. Find food immediately.";
+    }
+    else{
+    healthPoints-=finalHungerTick();
+    wellbeingHunger = "Ravenous";
+    return "The world begins to fade around you. If you have scraps, save yourself now.";
+    }
+  }
+  private void hungerPerTurn(){
+    int perTurn = (int)((Math.random()*5)+1);
+    hunger-=perTurn;
+  }
+
+  private void stati(Command command){
+    String type = command.getSecondWord();
+    type.toLowerCase();
+    if (type.equals("hunger")){
+      System.out.println(hungerStatus());
+    }
+    else if (type.equals("sanity")){
+      System.out.println("ur fine tough it out kid");
+    }
+  }
+
 
   /**
    * Try to go to one direction. If there is an exit, enter the new room,
@@ -154,6 +220,7 @@ public class Game {
     else {
       currentRoom = nextRoom;
       System.out.println(currentRoom.longDescription());
+      hungerPerTurn();
     }
   }
 }
