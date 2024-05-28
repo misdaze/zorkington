@@ -30,4 +30,8 @@ public class Inventory {
     }
   }
 
+  public void checkInv(){
+    System.out.println(this.items);
+  }
+
 }

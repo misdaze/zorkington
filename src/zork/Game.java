@@ -78,11 +78,10 @@ public class Game {
     String name = (String) ((JSONObject) itemObj).get("name");
     String desc = (String) ((JSONObject) itemObj).get("description");
     String room_id = (String) ((JSONObject) itemObj).get("room_id");
-
+    String itemtype = (String) ((JSONObject) itemObj).get("type");
     int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
     Boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
-
-    Item item = new Item(weight, name, isOpenable);
+    Item item = new Item(weight, name, isOpenable, desc, id, itemtype, room_id);
     if (room_id != null)
       roomMap.get(room_id).getInventory().addItem(item);
 }

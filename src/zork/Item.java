@@ -5,11 +5,17 @@ public class Item extends OpenableObject {
   public String name;
   public boolean isOpenable;
   public String description;
-
-  public Item(int weight, String name, Boolean isOpenable) {
+  public String itemId;
+  public String type;
+  public String roomId;
+  public Item(int weight, String name, Boolean isOpenable, String description, String itemId, String type, String roomId){
     this.weight = weight;
     this.name = name;
     this.isOpenable = isOpenable;
+    this.description = description;
+    this.itemId = itemId;
+    this.type = type;
+    this.roomId = roomId;
   }
 
 
