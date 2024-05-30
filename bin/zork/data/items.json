@@ -220,7 +220,7 @@
         {
         "id": "HealPot",
         "name": "Potion of Healing",
-        "description": "A miraculous concoction that heals your body completely..",
+        "description": "A miraculous concoction that heals your body completely.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
@@ -234,10 +234,10 @@
         "isOpenable":"false"
         },
         {
-        "id": "",
-        "name": "Morningstar",
-        "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
-        "room_id":"Hallway",
+        "id": "StrengthPot",
+        "name": "Potion of Strength",
+        "description": "A strong-smelling vial that strengthens your body.",
+        "room_id":"cabinet1",
         "weight":"10",
         "isOpenable":"false"
         },

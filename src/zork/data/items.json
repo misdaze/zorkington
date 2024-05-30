@@ -5,7 +5,7 @@
         "name": "Shortsword",
         "description": "A small, damaged sword. Gets the job done.",
         "room_id":"Courtyard",
-        "weight":"10",
+        "weight":"5",
         "isOpenable":"false",
         "isCursable":"true"
         },
@@ -14,7 +14,7 @@
         "name": "Longsword",
         "description": "A long iron sword. The balance of the blade feels good.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"15",
         "isOpenable":"false",
         "isCursable":"true"
         },
@@ -238,7 +238,7 @@
         "name": "Potion of Strength",
         "description": "A strong-smelling vial that strengthens your body.",
         "room_id":"cabinet1",
-        "weight":"10",
+        "weight":"10",  
         "isOpenable":"false"
         },
         {        
