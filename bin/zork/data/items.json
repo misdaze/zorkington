@@ -4,8 +4,8 @@
         "id": "shortsword",
         "name": "Shortsword",
         "description": "A small, damaged sword. Gets the job done.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "room_id":"Courtyard",
+        "weight":"5",
         "isOpenable":"false",
         "isCursable":"true"
         },
@@ -14,7 +14,7 @@
         "name": "Longsword",
         "description": "A long iron sword. The balance of the blade feels good.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"15",
         "isOpenable":"false",
         "isCursable":"true"
         },
@@ -58,7 +58,7 @@
         "id": "cleaver",
         "name": "Cleaver",
         "description": "A short, rusty meat cleaver. Weak but intimidating.",
-        "room_id":"Hallway",
+        "item_id":"drawer1",
         "weight":"10",
         "isOpenable":"false",
         "isCursable":"true"
@@ -174,13 +174,188 @@
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
+        },
+
+
+        {
+        "id": "tinder",
+        "name": "Tinderbox",
+        "description": "A box full of firestarting tools. Fires keep fear in check and offer warmth and safety.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "torch",
+        "name": "Torch",
+        "description": "A long stick wrapped with thick rags to prolong its burning.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "luckycoin",
+        "name": "Lucky Coin",
+        "description": "A coin that can be used in dire situations. Flipping it and choosing heads or tails can greatly boost stats and luck.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "silver",
+        "name": "Silver Coin",
+        "description": "A silver coin. It's valuable on the surface, but you might be able to use it down here too.",
+        "item_id":"cabinet1",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "vial",
+        "name": "Vial",
+        "description": "A small glass vial, used for alchemy.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "HealPot",
+        "name": "Potion of Healing",
+        "description": "A miraculous concoction that heals your body completely.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "SanePot",
+        "name": "Potion of Sanity",
+        "description": "A potion that recovers your sanity completely.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "StrengthPot",
+        "name": "Potion of Strength",
+        "description": "A strong-smelling vial that strengthens your body.",
+        "room_id":"cabinet1",
+        "weight":"10",  
+        "isOpenable":"false"
+        },
+        {        
+        "id": "",
+        "name": "Bone Shears",
+        "description": "Rusty scissors that are a little hard to use. Slow but capable of causing immense damage.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },  
+        {
+        "id": "",
+        "name": "Ritual Spear",
+        "description": "A simple spear used by primitive tribes living underground.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },  
+        {
+        "id": "",
+        "name": "Axe",
+        "description": "A typical multi-purpose hand axe.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "Csoul",
+        "name": "Soul Stone",
+        "description": "A smooth and round naturally formed gemstone.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "Bsoul",
+        "name": "Lesser Soul Stone",
+        "description": "A smooth, light gemstone. You can see tiny blue wisps moving within it.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "Asoul",
+        "name": "Ancient Soul Stone",
+        "description": "A surpisingly heavy gemstone. The inside radiates a faint blue light that swirls around.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "bonesaw",
+        "name": "Bone Saw",
+        "description": "A rusty blood-stained bonesaw. Good for dealing with infections.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },  
+        {
+        "id": "skinner",
+        "name": "Skinning Knife",
+        "description": "A small knife used for skinning animals and other living creatures.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "gnomeegg",
+        "name": "Gnome Egg",
+        "description": "An egg found inside the cavemother's body.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "gnomemilk",
+        "name": "Gnome Milk",
+        "description": "A vial full of yellow colored gnome milk. Ew.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "diamond",
+        "name": "Diamond",
+        "description": "A pure, radiant diamond chunk. Could be worth a lot outside of the dungeon.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+        {
+        "id": "crown",
+        "name": "King's Crown",
+        "description": "A golden crown with ornate enscriptions and jewels embedded all over. It must be worth fortunes.",
+        "room_id":"Hallway",
+        "weight":"10",
+        "isOpenable":"false"
+        },
+
+
+        {
+        "id": "cabinet1",
+        "name": "Kitchen Cabinet",
+        "description": "A damaged wooden cabinet. Who knows what's inside?",
+        "room_id": "1kitchen",
+        "weight":"10000",
+        "isOpenable": "true"
+        },
+        {
+        "id": "drawer1",
+        "name": "Kitchen Drawer",
+        "description": "A run-down drawer. Who knows what's inside?",
+        "room_id": "1kitchen",
+        "weight":"10000",
+        "isOpenable": "true"
         }
-
-
-
-
-
-
 
 
 

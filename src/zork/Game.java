@@ -37,6 +37,8 @@ public class Game {
     try {
       initRooms("src\\zork\\data\\rooms.json");
       initItems("src\\zork\\data\\items.json");
+      initNPCs("src\\zork\\data\\npcs.json");
+
       currentRoom = roomMap.get("Bedroom");
     } catch (Exception e) {
       e.printStackTrace();
@@ -45,13 +47,35 @@ public class Game {
 
   }
 
-  private void initItems(String fileName) throws Exception {
+
+  private void initNPCs(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
     JSONParser parser = new JSONParser();
     JSONObject json = (JSONObject) parser.parse(jsonString);
+
+    
+    JSONArray jsonNPCs = (JSONArray) json.get("npcs");
+
+    for (Object npcObj : jsonNPCs) {
+      String name = (String) ((JSONObject) npcObj).get("name");
+      String roomId = (String) ((JSONObject) npcObj).get("room_id");
+      String description = (String) ((JSONObject) npcObj).get("description");
+      String npcType = (String) ((JSONObject) npcObj).get("type");
+      String aglity = (String) ((JSONObject) npcObj).get("aglity");
+      String health = (String) ((JSONObject) npcObj).get("health");
+
+    if (npcType.equals("0")){
+      Hostile hostile = new Hostile(name, description, 0, 0);
+    }
+
+    else {
+      Trader trader = new Trader(name, description);
+    }
+     
+    }
   }
-  
+
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
@@ -82,9 +106,31 @@ public class Game {
       }
       room.setExits(exits);
       roomMap.put(roomId, room);
+      System.out.println(roomName);
     }
   }
 
+ private void initItems(String itemFileName) throws Exception{
+  Path path = Path.of(itemFileName);
+  String JsonString = Files.readString(path);
+  JSONParser parser = new JSONParser(); 
+  JSONObject json = (JSONObject) parser.parse(JsonString);
+
+  JSONArray jsonitems = (JSONArray) json.get("items");
+
+  for(Object itemObj : jsonitems){
+    String id = (String) ((JSONObject) itemObj).get("id");
+    String name = (String) ((JSONObject) itemObj).get("name");
+    String desc = (String) ((JSONObject) itemObj).get("description");
+    String room_id = (String) ((JSONObject) itemObj).get("room_id");
+    String itemtype = (String) ((JSONObject) itemObj).get("type");
+    int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
+    Boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
+    Item item = new Item(weight, name, isOpenable, desc, id, itemtype, room_id);
+    if (room_id != null)
+      roomMap.get(room_id).getInventory().addItem(item);
+}
+ } 
   /**
    * Main play routine. Loops until end of play.
    */

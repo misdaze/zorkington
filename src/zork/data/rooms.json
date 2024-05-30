@@ -20,89 +20,234 @@
       ]
     },
     {
-      "id": "Entrance",
+      "id": "1entrance",
       "name": "Level 1 Entrance",
       "description": "You are in a dungeon",
       "exits": [
         {
           "isLocked": false,
           "direction": "Northeast",
-          "adjacentRoom": "Level 1 Entrance Door"
+          "adjacentRoom": "Level 1 Entrance Door",
+          "keyId": "1entranceDoor"
 
         },
         {
           "isLocked": false,
           "direction": "NorthWest",
-          "adjacentRoom": " Level 1 Storage "
+          "adjacentRoom": " Level 1 Storage ",
+          "keyId": "1Storage"
         }
       ]
     },
     {
-    "id": "Entrance",
+    "id": "1entranceDoor",
       "name": "Level 1 Entrance Door",
-      "description": "You are in a dungeon",
+      "description": "Ogres are around",
       "exits": [
         {
           "isLocked": false,
-          "direction": "SouthWest",
-          "adjacentRoom": "Kitchen"
+          "direction": "Southeast",
+          "adjacentRoom": "Kitchen",
+          "keyId": "1kitchen"
         }
       ]
       }, 
       {
-      "id": "Kitchen",
+      "id": "1kitchen",
       "name": "Kitchen",
-      "description": "You are in a dungeon",
+      "description": "beware of this room",
       "exits": [
         {
           "isLocked": false,
           "direction": "North",
-          "adjacentRoom": "Level 1 Courtyard"
+          "adjacentRoom": "Level 1 Courtyard",
+          "keyId": "1courtyard"
         }
       ]
       }, 
       {
-        "id": "Courtyard",
+        "id": "1courtyard",
         "name": "Level 1 Courtyard",
-        "description": "You are in a dungeon",
+        "description": "so peaceful",
         "exits": [
           {
             "isLocked": true,
             "direction": "Northeast",
-            "adjacentRoom": "Counter-Magic Door"
+            "adjacentRoom": "Counter-Magic Door",
+            "keyId": "1counterMagic"
           },
           {
             "isLocked": false,
             "direction": "North",
-            "adjacentRoom": "Counter-Magic Door"
+            "adjacentRoom": "Inner Hall",
+            "keyId": "1InnerHall"
           }
         ]
 
 
       }, 
       {
-        "id": "Inner Hall",
+        "id": "1InnerHall",
         "name": "Inner Hall",
         "description": "It might be still possible to escape these dungeons",
         "exits": [
           {
+            "isLocked": false,
+            "direction": "NorthWest",
+            "adjacentRoom": "Library",
+            "keyId": "1library"
+          },
+          {
+
+            "isLocked": false,
+            "direction" : "Northeast",
+            "adjacentRoom": "Blood Pit",
+            "keyId": "2BLoodPit"
+
+
+          },
+          {
+
+            "isLocked": false,
+            "direction" : "Southwest",
+            "adjacentRoom": "Music Room",
+            "keyId": "1MusicRoom"
 
 
           }
 
+        
+        ]
+
+
+      },
+      {
+        "id": "1MusicRoom",
+        "name": "Music Room",
+        "description":  "hello mr B!"
+        
+
+      },
+      {
+        "id": "2BloodPit",
+        "name": "Blood Pit",
+        "description":  "wet ground feels squishy underneath your feet",
+        "exits":[
+          {
+            "isLocked": false,
+            "direction": "Northeast",
+            "adjacentRoom": "Prison",
+            "keyId": "3Prison"
+          }
+        ]
+
+
+      },
+      {
+        "id": "3Prison",
+        "name": "Prison",
+        "description":  "beware of the guards",
+        "exits":[
+          {
+            "isLocked": false,
+            "direction": "Southeast",
+            "adjacentRoom": "Basement",
+            "keyId": "3Basement"
+          },
+          {
+            "isLocked": true,
+            "direction": "east",
+            "adjacentRoom": "Boss Room",
+            "keyId": "3BossRoom"
+          }
+
+        
+        ]
+
+      },
+      {
+        "id": "3BossRoom",
+        "name": "Boss Room",
+        "description":  "Final level",
+        "exits":[
+
         ]
       },
+      {
+        "id": "3Basement",
+        "name": "Basement",
+        "description":  "an ominous aura fill the hallways",
+        "exits":[
+          {
+            "isLocked": true,
+            "direction": "South",
+            "adjacentRoom": "Unknown",
+            "keyId": "3Unknown"
+          }
+        ]
 
+      },
 
       {
-      "id": "Stairway",
+        "id": "1Library",
+        "name": "Library",
+        "description": "",
+        "exits": [
+          {
+            "isLocked": false,
+            "direction": "North",
+            "adjacentRoom": "Backyard",
+            "keyId": "1Backyard"
+          }
+          
+        ]
+        },
+        {
+          "id": "1Backyard",
+          "name": "Backyard",
+          "description": "Does the mist carry tiny spores in it?",
+          "exits": [
+            {
+              "isLocked": true,
+              "direction": "Northeast",
+              "adjacentRoom": "Statue",
+              "keyId": "1Statue"
+          },
+            {
+              "isLocked": false,
+              "direction": "North",
+              "adjacentRoom": "Hidden Backyard",
+              "keyId": "1HiddenBackyard"
+            }
+            
+          ]
+          },
+          {
+            "id": "1HiddenBackyard",
+            "name": "Hidden Backyard",
+            "description":"Does the mist carry tiny spores in it?",
+            "exits":[
+              {
+              "isLocked": false,
+              "direction": "NorthWest",
+              "adjacentRoom": "Thicket",
+              "keyId": "2Thicket"
+              }
+
+            ]
+            
+
+          },
+          {
+      "id": "1stairway",
       "name": "Level 1 Stairway",
       "description": "You are in a blue bathroom",
       "exits": [
         {
           "isLocked": false,
           "direction": "NorthWest",
-          "adjacentRoom": "Fly Room"
+          "adjacentRoom": "Fly Room",
+          "keyId": "1flyRoom"
           
         }
     
@@ -110,7 +255,7 @@
 
     },
     {
-      "id": "Fly Room",
+      "id": "1flyRoom",
       "name": "Closet",
       "description": "It is dark.",
       "exits": [
@@ -125,13 +270,15 @@
         {
           "isLocked": false,
           "direction": "NorthWest",
-          "adjacentRoom": "Hallway"
+          "adjacentRoom": "Hallway",
+          "keyId": "1farDoor"
         },
 
         {
           "isLocked": true,
           "direction": "North",
-          "adjacentRoom": "Room"
+          "adjacentRoom": "Locked Door",
+          "keyId": "1lockedDoor"
           
 
         }
@@ -140,8 +287,8 @@
       ]
     },
       {
-        "id": "Locked Room",
-        "name": "Lockey Room",
+        "id": "1lockerDoor",
+        "name": "Locked Room",
         "description": "An ameoba awaits",
         "exits": [
 
