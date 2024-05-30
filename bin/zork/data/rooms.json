@@ -105,11 +105,27 @@
             "keyId": "2BLoodPit"
 
 
+          },
+          {
+
+            "isLocked": false,
+            "direction" : "Southwest",
+            "adjacentRoom": "Music Room",
+            "keyId": "1MusicRoom"
+
+
           }
 
         
         ]
 
+
+      },
+      {
+        "id": "1MusicRoom",
+        "name": "Music Room",
+        "description":  "hello mr B!"
+        
 
       },
       {
