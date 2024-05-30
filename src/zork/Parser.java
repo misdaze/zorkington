@@ -11,6 +11,23 @@ public class Parser {
     in = new Scanner(System.in);
   }
 
+  public int getOption(int low, int high){
+    while (true){
+      String result = in.nextLine();
+
+      try{
+        int r = Integer.parseInt(result);
+        if (r >= low && r <= high)
+          return r;
+        else{
+          System.out.println("Not a valid option.");
+        }
+      }catch(Exception ex){
+        System.out.println("Not a valid option.");
+      }
+    }
+  }
+
   public Command getCommand() throws java.io.IOException {
     String inputLine = "";
     String[] words;
