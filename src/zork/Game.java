@@ -1,13 +1,22 @@
 package zork;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+import java.awt.Desktop;
 
 public class Game {
 
@@ -93,7 +102,7 @@ public class Game {
       }
 
     }
-    System.out.println("Thank you for playing.  Good bye.");
+    System.out.println("Thank you for being freaky.  Good boy.");
   }
 
   /**
@@ -101,11 +110,13 @@ public class Game {
    */
   private void printWelcome() {
     System.out.println();
-    System.out.println("Welcome to Zork!");
-    System.out.println("Zork is a new, incredibly boring adventure game.");
-    System.out.println("Type 'help' if you need help.");
+    System.out.println("Welcome to Zerk!");
+    System.out.println("Zerk is a new, incredibly freaky adventure game.");
+    System.out.println("Type 'freak' if you need ''Help'' 😏.");
     System.out.println();
-    System.out.println(currentRoom.longDescription());
+    //System.out.println("Working Directory = " + System.getProperty("user.dir"));
+    mappings();
+    //System.out.println(currentRoom.longDescription());
   }
 
   /**
@@ -142,6 +153,34 @@ public class Game {
    * Print out some help information. Here we print some stupid, cryptic message
    * and a list of the command words.
    */
+  private void mappings() {
+    String dir = System.getProperty("user.dir");
+    File file_open = new File(dir+"\\image.png");  
+    Path copied = Paths.get(dir+"\\SACRIFICE.png");
+    Path originalPath = file_open.toPath();
+    File copycheck = new File(dir+"\\SACRIFICE.png");
+      try {
+        boolean result = Files.deleteIfExists(copycheck.toPath());
+        System.out.println(result);
+      } catch (IOException e) {
+        // TODO Auto-generated catch block
+        System.out.println("couldnt del");
+        e.printStackTrace();
+      }
+    try {
+      Files.copy(originalPath, copied, StandardCopyOption.COPY_ATTRIBUTES);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }           
+      JFrame frame = new JFrame("Minimap");
+        frame.setSize(600, 600);  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        frame.setVisible(true);
+        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.png");
+        frame.add(new JLabel(map));
+        frame.pack();
+  }
   private void printHelp() {
     System.out.println("You are lost. You are alone. You wander");
     System.out.println("around at Monash Uni, Peninsula Campus.");
