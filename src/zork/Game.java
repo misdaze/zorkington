@@ -182,6 +182,8 @@ public class Game {
       goRoom(command);
     else if (commandWord.equals("status"))
       stati(command);
+      else if (commandWord.equals("map"))
+      mappings();
     else if (commandWord.equals("quit")) {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
@@ -201,10 +203,10 @@ public class Game {
    */
   private void mappings() {
     String dir = System.getProperty("user.dir");
-    File file_open = new File(dir+"\\image.png");  
-    Path copied = Paths.get(dir+"\\SACRIFICE.png");
+    File file_open = new File(dir+"\\image.jpg");  
+    Path copied = Paths.get(dir+"\\SACRIFICE.jpg");
     Path originalPath = file_open.toPath();
-    File copycheck = new File(dir+"\\SACRIFICE.png");
+    File copycheck = new File(dir+"\\SACRIFICE.jpg");
       try {
         boolean result = Files.deleteIfExists(copycheck.toPath());
         System.out.println(result);
@@ -223,7 +225,7 @@ public class Game {
         frame.setSize(600, 600);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
-        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.png");
+        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.jpg");
         frame.add(new JLabel(map));
         frame.pack();
   }
