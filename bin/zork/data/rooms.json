@@ -137,10 +137,25 @@
             "direction": "Southeast",
             "adjacentRoom": "Basement",
             "keyId": "3Basement"
+          },
+          {
+            "isLocked": true,
+            "direction": "east",
+            "adjacentRoom": "Boss Room",
+            "keyId": "3BossRoom"
           }
+
         
         ]
 
+      },
+      {
+        "id": "3BossRoom",
+        "name": "Boss Room",
+        "description":  "Final level",
+        "exits":[
+
+        ]
       },
       {
         "id": "3Basement",
