@@ -21,6 +21,13 @@ public class Inventory {
     return currentWeight;
   }
 
+  public void weaponInventory(){
+    for(int i = 0; i < items.size(); i++)
+      if(){
+
+    }
+  }
+
   public boolean addItem(Item item) {
     if (item.getWeight() + currentWeight <= maxWeight)
       return items.add(item);
@@ -28,6 +35,10 @@ public class Inventory {
       System.out.println("There is no room to add the item.");
       return false;
     }
+  }
+
+  public void checkInv(){
+    System.out.println(this.items);
   }
 
 }
