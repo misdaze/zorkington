@@ -24,6 +24,21 @@ public class Room {
     this.exits = exits;
   }
 
+  public void addNPC(NPC npc){
+    npcs.add(npc);
+  }
+
+  public boolean hasHostiles(){
+    if (npcs.size()>0){
+      for (NPC npc : npcs) {
+        if (npc instanceof Hostile)
+          return true;
+      }
+    }
+
+    return false;
+  }
+
   /**
    * Create a room described "description". Initially, it has no exits.
    * "description" is something like "a kitchen" or "an open court yard".
