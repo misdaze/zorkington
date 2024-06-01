@@ -3,6 +3,10 @@
     {
       "id": "Courtyard",
       "mapIdentifier": 1,
+      "x1": 1263,
+      "x2": 1524,
+      "y1": 609,
+      "y2": 878,
       "name": "Courtyard",
       "description": "Have fun!",
       "exits": [
@@ -131,7 +135,15 @@
         "id": "1MusicRoom",
         "mapIdentifier": 7,
         "name": "Music Room",
-        "description":  "hello mr B!"
+        "description":  "hello mr B!",
+        "exits": [
+          {
+            "isLocked": false,
+            "direction" : "NorthWest",
+            "adjacentRoom": "Inner Hall",
+            "keyId": "1InnerHall"
+          }
+        ]
         
 
       },

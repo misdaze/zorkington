@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Room {
 
   private String roomName;
+  private int roomnumber;
   private String description;
   private ArrayList<Exit> exits;
   private Inventory inventory;
@@ -131,7 +132,6 @@ public class Room {
   public String getRoomName() {
     return roomName;
   }
-
   public void setRoomName(String roomName) {
     this.roomName = roomName;
   }
@@ -142,5 +142,11 @@ public class Room {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+  public int getNum(){
+    return roomnumber;
+  }
+  public void setroomnum(int rn){
+    this.roomnumber = rn;
   }
 }
