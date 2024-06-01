@@ -63,15 +63,20 @@ public class Game {
       String roomId = (String) ((JSONObject) npcObj).get("room_id");
       String description = (String) ((JSONObject) npcObj).get("description");
       String npcType = (String) ((JSONObject) npcObj).get("type");
-      String aglity = (String) ((JSONObject) npcObj).get("aglity");
-      String health = (String) ((JSONObject) npcObj).get("health");
+      int aglity = Integer.parseInt((String) ((JSONObject) npcObj).get("aglity"));
+      int health =  Integer.parseInt((String) ((JSONObject) npcObj).get("health"));
+      int strength =  Integer.parseInt((String) ((JSONObject) npcObj).get("strength"));
+
 
     if (npcType.equals("0")){
-      Hostile hostile = new Hostile(name, description, 0, 0);
+      Hostile hostile = new Hostile(name, description, health, aglity, strength);
+      roomMap.get(roomId).addNPC(hostile);
     }
 
     else {
       Trader trader = new Trader(name, description);
+      roomMap.get(roomId).addNPC(trader);
+
     }
      
     }
@@ -179,10 +184,16 @@ public class Game {
     String commandWord = command.getCommandWord();
     if (commandWord.equals("help"))
       printHelp();
-    else if (commandWord.equals("go"))
-      goRoom(command);
-    else if (commandWord.equals("status"))
+    else if (commandWord.equals("go")){
+      if (currentRoom.hasHostiles()){
+        System.out.println("The hostile won't let you leave.");
+      }else{
+        goRoom(command);
+      }
+    }else if (commandWord.equals("status"))
       stati(command);
+      else if (commandWord.equals("map"))
+      mappings();
     else if (commandWord.equals("quit")) {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
@@ -203,10 +214,10 @@ public class Game {
   private void mappings() {
    // ArrayList<List> one = new ArrayList<List>();
     String dir = System.getProperty("user.dir");
-    File file_open = new File(dir+"\\image.png");  
-    Path copied = Paths.get(dir+"\\SACRIFICE.png");
+    File file_open = new File(dir+"\\image.jpg");  
+    Path copied = Paths.get(dir+"\\SACRIFICE.jpg");
     Path originalPath = file_open.toPath();
-    File copycheck = new File(dir+"\\SACRIFICE.png");
+    File copycheck = new File(dir+"\\SACRIFICE.jpg");
       try {
         boolean result = Files.deleteIfExists(copycheck.toPath());
         System.out.println(result);
@@ -225,7 +236,7 @@ public class Game {
         frame.setSize(600, 600);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
-        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.png");
+        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.jpg");
         frame.add(new JLabel(map));
         frame.pack();
   }
@@ -293,6 +304,30 @@ public class Game {
       System.out.println("ur fine tough it out kid");
     }
   }
+
+
+
+ private void playerfight(Hostile hostile){
+
+int Hhealth = hostile.Rhealth();
+
+while(Hhealth > 0 && healthPoints > 0){
+  int damage = hostile.fight();
+    if (damage > 0)
+    System.out.println(hostile.Rname() + "has smacked you");
+    healthPoints = healthPoints - damage;
+    // give options
+    System.out.println("what would you like to do");
+    System.out.println("1 to attack ");
+    System.out.println("2 to block");
+    int player = parser.getOption(1, 2);
+    if (player = 1){
+    s
+    
+    }
+}
+ }
+
 
 
   /**
