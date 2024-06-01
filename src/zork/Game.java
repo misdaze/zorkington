@@ -277,6 +277,7 @@ public class Game {
       JFrame frame = new JFrame("Minimap");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.getContentPane().add(new JLabel(new ImageIcon(subimg)));
         frame.pack();
 
