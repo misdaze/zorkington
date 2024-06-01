@@ -17,6 +17,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Desktop;
+import java.awt.List;
 
 public class Game {
 
@@ -200,6 +201,7 @@ public class Game {
    * and a list of the command words.
    */
   private void mappings() {
+   // ArrayList<List> one = new ArrayList<List>();
     String dir = System.getProperty("user.dir");
     File file_open = new File(dir+"\\image.png");  
     Path copied = Paths.get(dir+"\\SACRIFICE.png");
