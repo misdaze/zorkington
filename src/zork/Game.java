@@ -40,6 +40,7 @@ public class Game {
    */
   public Game() {
     try {
+      coordsort();
       initRooms("src\\zork\\data\\rooms.json");
       //initItems("src\\zork\\data\\items.json"); FIX UR INVENTORY / ITEM PARSER DRAKE AND RYAN!!!!!!!!!!!!!!!!
       //initNPCs("src\\zork\\data\\NPC.json"); FIX UR NPC PARSER TING!!!! I CANT TEST THE GAME!!!! DAMN!!!!!!
@@ -246,16 +247,17 @@ public class Game {
   public ArrayList<int[]> things = new ArrayList<int[]>();
   private void coordsort() throws IOException, ParseException {
     for (int i = 0; i < 17; i++) {
-      things.add(coordsgetter(0));
-      //System.out.println(coordsgetter(0));
-      //System.out.println(things.get(0));
+      if (coordsgetter(i) != null){
+        things.add(coordsgetter(i));
+      }
     }
   }
+  
   private void mappings() throws IOException, ParseException {
     //System.out.println(currentRoom);
    // ArrayList<List> one = new ArrayList<List>();
-   coordsort();
-   int id = currentRoom.getNum();
+   
+    int id = currentRoom.getNum();
     int[] array = things.get(id-1);
     System.out.println(array[0]);
     String dir = System.getProperty("user.dir");
@@ -275,7 +277,6 @@ public class Game {
       g.dispose();
       BufferedImage subimg = readtomap.getSubimage(array[0], array[2], (array[1]-array[0]), (array[3]-array[2]));
       JFrame frame = new JFrame("Minimap");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
         frame.setResizable(false);
         frame.setAlwaysOnTop(true);
@@ -389,8 +390,10 @@ while(Hhealth > 0 && healthPoints > 0){
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
 
-    if (nextRoom == null)
+    if (nextRoom == null){
       System.out.println("There is no door!");
+      System.out.println("Your exits are: " + currentRoom.exitString());
+    }
     else {
       currentRoom = nextRoom;
       System.out.println(currentRoom.longDescription());
