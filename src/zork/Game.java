@@ -278,6 +278,7 @@ public class Game {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
         frame.setResizable(false);
+        frame.setAlwaysOnTop(true);
         frame.getContentPane().add(new JLabel(new ImageIcon(subimg)));
         frame.pack();
 
