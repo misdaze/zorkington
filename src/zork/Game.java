@@ -2,6 +2,7 @@ package zork;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,6 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Desktop;
+import java.awt.image.BufferedImage;
 
 public class Game {
 
@@ -95,6 +97,7 @@ public class Game {
       String roomName = (String) ((JSONObject) roomObj).get("name");
       String roomId = (String) ((JSONObject) roomObj).get("id");
       String roomDescription = (String) ((JSONObject) roomObj).get("description");
+      int roomid = (int)((JSONObject) roomObj).get(key:"");
       room.setDescription(roomDescription);
       room.setRoomName(roomName);
 
@@ -166,7 +169,7 @@ public class Game {
     System.out.println("Type 'freak' if you need ''Help'' 😏.");
     System.out.println();
     //System.out.println("Working Directory = " + System.getProperty("user.dir"));
-    mappings();
+    // mappings();
     //System.out.println(currentRoom.longDescription());
   }
 
@@ -210,6 +213,7 @@ public class Game {
    * Print out some help information. Here we print some stupid, cryptic message
    * and a list of the command words.
    */
+  ArrayList<Array> things = new ArrayList<Array>();
   private void mappings() {
     String dir = System.getProperty("user.dir");
     File file_open = new File(dir+"\\image.jpg");  
@@ -229,7 +233,15 @@ public class Game {
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
-    }           
+    }
+    try {
+      BufferedImage img = ImageIO.read(copycheck);
+      BufferedImage readtomap = new BufferedImage(
+    img.getWidth(), img.getHeight(), BufferedImage.TYPE_INT_ARGB);
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }        
       JFrame frame = new JFrame("Minimap");
         frame.setSize(600, 600);  
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  

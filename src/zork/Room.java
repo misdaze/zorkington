@@ -10,7 +10,6 @@ public class Room {
   private Inventory inventory;
   private ArrayList<NPC> npcs;
 
-
   
   public ArrayList<Exit> getExits() {
     return exits;
