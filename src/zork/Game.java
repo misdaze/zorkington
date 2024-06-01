@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 
 import java.awt.Desktop;
 import java.awt.image.BufferedImage;
+import java.awt.List;
 
 public class Game {
 
@@ -215,6 +216,7 @@ public class Game {
    */
   ArrayList<Array> things = new ArrayList<Array>();
   private void mappings() {
+   // ArrayList<List> one = new ArrayList<List>();
     String dir = System.getProperty("user.dir");
     File file_open = new File(dir+"\\image.jpg");  
     Path copied = Paths.get(dir+"\\SACRIFICE.jpg");

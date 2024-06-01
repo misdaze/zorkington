@@ -2,6 +2,7 @@
   "rooms": [
     {
       "id": "Courtyard",
+      "mapIdentifier": 1,
       "name": "Courtyard",
       "description": "Have fun!",
       "exits": [
@@ -21,6 +22,7 @@
     },
     {
       "id": "1entrance",
+      "mapIdentifier": 2,
       "name": "Level 1 Entrance",
       "description": "You are in a dungeon",
       "exits": [
@@ -41,6 +43,7 @@
     },
     {
     "id": "1entranceDoor",
+    "mapIdentifier": 3,
       "name": "Level 1 Entrance Door",
       "description": "Ogres are around",
       "exits": [
@@ -54,6 +57,7 @@
       }, 
       {
       "id": "1kitchen",
+      "mapIdentifier": 4,
       "name": "Kitchen",
       "description": "beware of this room",
       "exits": [
@@ -67,6 +71,7 @@
       }, 
       {
         "id": "1courtyard",
+        "mapIdentifier": 5,
         "name": "Level 1 Courtyard",
         "description": "so peaceful",
         "exits": [
@@ -88,6 +93,7 @@
       }, 
       {
         "id": "1InnerHall",
+        "mapIdentifier": 6,
         "name": "Inner Hall",
         "description": "It might be still possible to escape these dungeons",
         "exits": [
@@ -123,6 +129,7 @@
       },
       {
         "id": "1MusicRoom",
+        "mapIdentifier": 7,
         "name": "Music Room",
         "description":  "hello mr B!"
         
@@ -130,6 +137,7 @@
       },
       {
         "id": "2BloodPit",
+        "mapIdentifier": 8,
         "name": "Blood Pit",
         "description":  "wet ground feels squishy underneath your feet",
         "exits":[
@@ -145,6 +153,7 @@
       },
       {
         "id": "3Prison",
+        "mapIdentifier": 9,
         "name": "Prison",
         "description":  "beware of the guards",
         "exits":[
@@ -167,6 +176,7 @@
       },
       {
         "id": "3BossRoom",
+        "mapIdentifier": 10,
         "name": "Boss Room",
         "description":  "Final level",
         "exits":[
@@ -175,6 +185,7 @@
       },
       {
         "id": "3Basement",
+        "mapIdentifier": 11,
         "name": "Basement",
         "description":  "an ominous aura fill the hallways",
         "exits":[
@@ -190,6 +201,7 @@
 
       {
         "id": "1Library",
+        "mapIdentifier": 12,
         "name": "Library",
         "description": "",
         "exits": [
@@ -204,6 +216,7 @@
         },
         {
           "id": "1Backyard",
+          "mapIdentifier": 13,
           "name": "Backyard",
           "description": "Does the mist carry tiny spores in it?",
           "exits": [
@@ -224,6 +237,7 @@
           },
           {
             "id": "1HiddenBackyard",
+            "mapIdentifier": 14,
             "name": "Hidden Backyard",
             "description":"Does the mist carry tiny spores in it?",
             "exits":[
@@ -240,6 +254,7 @@
           },
           {
       "id": "1stairway",
+      "mapIdentifier": 15,
       "name": "Level 1 Stairway",
       "description": "You are in a blue bathroom",
       "exits": [
@@ -256,6 +271,7 @@
     },
     {
       "id": "1flyRoom",
+      "mapIdentifier": 16,
       "name": "Closet",
       "description": "It is dark.",
       "exits": [
@@ -288,6 +304,7 @@
     },
       {
         "id": "1lockerDoor",
+        "mapIdentifier": 17,
         "name": "Locked Room",
         "description": "An ameoba awaits",
         "exits": [
