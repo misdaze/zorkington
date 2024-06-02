@@ -50,7 +50,7 @@
       ]
     },
     {
-    "id": "1entranceDoor",
+    "id": "Level 1 Entrance Door",
     "mapIdentifier": 3,
     "x1": 0,
       "x2": 0,
@@ -68,7 +68,7 @@
       ]
       }, 
       {
-      "id": "1kitchen",
+      "id": "Kitchen",
       "mapIdentifier": 4,
       "x1": 0,
       "x2": 0,
@@ -86,7 +86,7 @@
       ]
       }, 
       {
-        "id": "1courtyard",
+        "id": "Level 1 Courtyard",
         "mapIdentifier": 5,
         "x1": 0,
         "x2": 0,
@@ -112,7 +112,7 @@
 
       }, 
       {
-        "id": "1InnerHall",
+        "id": "Inner Hall",
         "mapIdentifier": 6,
         "x1": 0,
         "x2": 0,
@@ -152,7 +152,7 @@
 
       },
       {
-        "id": "1MusicRoom",
+        "id": "Music Room",
         "mapIdentifier": 7,
         "x1": 0,
         "x2": 0,
@@ -172,7 +172,7 @@
 
       },
       {
-        "id": "2BloodPit",
+        "id": "Blood Pit",
         "mapIdentifier": 8,
         "x1": 0,
         "x2": 0,
@@ -192,7 +192,7 @@
 
       },
       {
-        "id": "3Prison",
+        "id": "Prison",
         "mapIdentifier": 9,
         "x1": 0,
         "x2": 0,
@@ -219,7 +219,7 @@
 
       },
       {
-        "id": "3BossRoom",
+        "id": "Boss Room",
         "mapIdentifier": 10,
         "x1": 0,
         "x2": 0,
@@ -232,7 +232,7 @@
         ]
       },
       {
-        "id": "3Basement",
+        "id": "Basement",
         "mapIdentifier": 11,
         "x1": 0,
         "x2": 0,
@@ -252,7 +252,7 @@
       },
 
       {
-        "id": "1Library",
+        "id": "Library",
         "mapIdentifier": 12,
         "x1": 0,
         "x2": 0,
@@ -271,7 +271,7 @@
         ]
         },
         {
-          "id": "1Backyard",
+          "id": "Backyard",
           "mapIdentifier": 13,
           "x1": 0,
           "x2": 0,
@@ -296,7 +296,7 @@
           ]
           },
           {
-            "id": "1HiddenBackyard",
+            "id": "Hidden Backyard",
             "mapIdentifier": 14,
             "x1": 0,
             "x2": 0,
@@ -317,7 +317,7 @@
 
           },
           {
-      "id": "1stairway",
+      "id": "Level 1 Stairway",
       "mapIdentifier": 15,
       "x1": 0,
       "x2": 0,
@@ -338,7 +338,7 @@
 
     },
     {
-      "id": "1flyRoom",
+      "id": "Closet",
       "mapIdentifier": 16,
       "x1": 0,
       "x2": 0,
@@ -375,7 +375,7 @@
       ]
     },
       {
-        "id": "1lockerDoor",
+        "id": "Locked Room",
         "mapIdentifier": 17,
         "x1": 0,
         "x2": 0,
