@@ -317,13 +317,11 @@ while(Hhealth > 0 && healthPoints > 0){
     System.out.println("1 to attack ");
     System.out.println("2 to block");
     int player = parser.getOption(1, 2);
-    if (player = 1){
-    s
+  
     
     }
 }
- }
-
+ 
 
 
   /**
