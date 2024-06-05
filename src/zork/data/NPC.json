@@ -1,7 +1,7 @@
 {
     "npcs":[
         {
-            "name":"wolves",
+            "name":"Wolves",
             "type": "0",
             "room_id":"Courtyard",
             "description":"A pack of wolves searching for their next meal.",
@@ -11,21 +11,21 @@
             
         },
         {
-            "name":"guard",
+            "name":"Guard",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"Elite guards",
+            "name":"Elite Guards",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"cave Gnomes",
+            "name":"Cave Gnomes",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
@@ -39,56 +39,56 @@
 
         },
         {
-            "name":"dark priests ",
+            "name":"Dark Priests ",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"lizardmen",
+            "name":"Lizardmen",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"nightlurches",
+            "name":"Nightlurches",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"yellow mage",
+            "name":"Yellow Mage",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"harvestman",
+            "name":"Harvestman",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"lord of the flies",
+            "name":"Lord of The Flies",
             "type": "0",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"wandering nard",
+            "name":"Wandering Dinio",
             "type": "1",
             "room_id":"Entrance",
             "description":"A"
 
         },
         {
-            "name":"cave Dwellers",
+            "name":"Cave Dwellers",
             "type": "1",
             "room_id":"Entrance",
             "description":"A"
