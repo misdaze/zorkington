@@ -12,9 +12,20 @@
         },
         {
         "itemtype":"Weapon",
+        "weaponType":"Axe",
+        "id": "axe",
+        "name": "Axe",
+        "description": "A typical multi-purpose hand axe.",
+        "room_id":"Courtyard",
+        "weight":"10",
+        "isOpenable":"false",
+        "isCursable":"true"
+        },
+        {
+        "itemtype":"Weapon",
         "weaponType":"Greatsword",
         "id": "longsword",
-        "name": "Longsword",
+        "name": "Courtyard",
         "description": "A long iron sword. The balance of the blade feels good.",
         "room_id":"Hallway",
         "weight":"15",
@@ -26,17 +37,7 @@
         "id": "ironspear",
         "name": "Iron Spear",
         "description": "A long iron spear.",
-        "room_id":"Hallway",
-        "weight":"7",
-        "isOpenable":"false"
-        },
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Shortsword",   
-        "id": "scimitar",
-        "name": "Scimitar",
-        "description": "A short curved sword capable of causing deep slash wounds.",
-        "room_id":"Hallway",
+        "room_id":"Courtyard",
         "weight":"7",
         "isOpenable":"false"
         },
@@ -46,7 +47,7 @@
         "id": "ironmace",
         "name": "Iron Mace",
         "description": "A small, rusty iron mace capable of staggering those hit by it.",
-        "room_id":"Hallway",
+        "room_id":"Courtyard",
         "weight":"8",
         "isOpenable":"false"
         },
@@ -66,7 +67,7 @@
         "id": "morningstar",
         "name": "Morningstar",
         "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
-        "room_id":"Hallway",
+        "room_id":"1InnerHall",
         "weight":"17",
         "isOpenable":"false"
         },
@@ -90,17 +91,6 @@
         "weight":"13",
         "isOpenable":"false"
         },  
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Axe",
-        "id": "axe",
-        "name": "Axe",
-        "description": "A typical multi-purpose hand axe.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
-        },
         {
         "itemtype":"Weapon",
         "weaponType":"Greatsword",
@@ -147,7 +137,7 @@
         "id": "bluesin",
         "name": "Blue Sin",
         "description": "A fine and light short sword with blue carvings on its hilt and blade.",
-        "room_id":"Hallway",
+        "item_id":"fancybox1",
         "weight":"8",
         "isOpenable":"false"
         },
@@ -205,7 +195,7 @@
         "id": "torch",
         "name": "Torch",
         "description": "A long stick wrapped with thick rags to prolong its burning.",
-        "room_id":"Courtyard",
+        "room_id":"1entrance",
         "weight":"4",
         "isOpenable":"false"
         },
@@ -221,15 +211,15 @@
         "id": "HealPot",
         "name": "Potion of Healing",
         "description": "A miraculous concoction that heals your body completely.",
-        "room_id":"Hallway",
+        "item_id":"fancybox1",
         "weight":"2",
         "isOpenable":"false"
         },
         {
         "id": "SanePot",
         "name": "Potion of Sanity",
-        "description": "A potion that recovers your sanity completely.",
-        "room_id":"Hallway",
+        "description": "A potion that recovers your sanity completely. You're gonna need it.",
+        "room_id":"2BloodPit",
         "weight":"2",
         "isOpenable":"false"
         },
@@ -259,14 +249,6 @@
         "isOpenable":"false"
         },  
         {
-        "id": "beartrap",
-        "name": "Bear Trap",
-        "description": "A strong trap that will cause severe damage.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
         "id": "bonesaw",
         "name": "Bone Saw",
         "description": "A rusty blood-stained bonesaw. Good for dealing with infections.",
@@ -286,39 +268,53 @@
         "id": "crown",
         "name": "King's Crown",
         "description": "A golden crown with ornate enscriptions and jewels embedded all over. It must be worth fortunes.",
-        "room_id":"Hallway",
+        "room_id":"fancybox1",
         "weight":"5",
         "isOpenable":"false"
         },
 
 
         {
-        "id": "gnomeegg",
-        "name": "Gnome Egg",    
-        "description": "An egg found inside the cavemother's body.",
+        "id": "egg",
+        "name": "Egg",    
+        "description": "An egg. What did you think it was?",
         "room_id":"Hallway",
         "weight":"2",
         "isOpenable":"false"
         },
         {
-        "id": "gnomemilk",
-        "name": "Gnome Milk",
-        "description": "A vial full of yellow colored gnome milk. Ew.",
+        "id": "milk",
+        "name": "Milk",
+        "description": "A vial full of yellowish milk. Ew.",
         "room_id":"Hallway",
         "weight":"3",
         "isOpenable":"false"
         },
-
-
-
         {
-        "id": "gnomemilk",
-        "name": "Gnome Milk",
-        "description": "A vial full of yellow colored gnome milk. Ew.",
+        "id": "tomato",
+        "name": "Tomato",
+        "description": "A hearty round tomato. Good for humiliating bad performers.",
         "room_id":"Hallway",
         "weight":"3",
         "isOpenable":"false"
-        },        
+        },
+        {
+        "id": "meat",
+        "name": "Dried Meat",
+        "description": "A rusty can of meat strips dried to prevent spoiling",
+        "item_id":"cabinet1",
+        "weight":"3",
+        "isOpenable":"false"
+        },
+        {
+        "id": "body",
+        "name": "Dead Body",
+        "description": "A rotting dead body with stab wounds from head to toe. Desperate times call for desperate measures...",
+        "room_id":"2BloodPit",
+        "weight":"3",
+        "isOpenable":"false"
+        },
+
 
         {
         "id": "cabinet1",
@@ -347,12 +343,19 @@
         {
         "id": "fancybox1",
         "name": "Ornate Box",
-        "description": "A worn down box with elaborate golden details along a velvet surface. Probably owned by someone of high status.",
-        "room_id": "3Prison",
+        "description": "A worn down box with a velvet surface, covered with elaborate gold accents and detailing. Probably owned by someone of high status.",
+        "room_id": "1flyRoom",
         "weight":"10000",
         "isOpenable": "true"
-        }
-        
+        },
+        {
+        "id": "picnicbasket1",
+        "name": "Picnic Basket",
+        "description": "A small picnic basket full of assorted foods. Cute.",
+        "room_id": "1Backyard",
+        "weight":"10000",
+        "isOpenable": "true"
+        }        
 
 
         
