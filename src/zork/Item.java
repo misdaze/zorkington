@@ -17,6 +17,7 @@ public class Item extends OpenableObject {
     this.type = type;
     this.roomId = roomId;
   }
+  
 
 
 public void open() {
