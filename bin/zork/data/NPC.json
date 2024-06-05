@@ -1,17 +1,17 @@
 {
     "npcs":[
         {
-            "name":"wolves",
+            "name":"Wolves",
             "type": "0",
             "room_id":"Courtyard",
-            "description":"a pack of wovles searching for their next meal",
+            "description":"A pack of wolves searching for their next meal.",
             "aglity":"100",
             "health":"100",
             "strength":"20"
             
         },
         {
-            "name":"guard",
+            "name":"Guard",
             "type": "0",
             "room_id":"Level 1 Entrance Door",
             "description":"There seems to be a large guard sitting by the door",
@@ -30,9 +30,10 @@
             "health":"115",
             "strength":"55"
 
+
         },
         {
-            "name":"cave Gnomes",
+            "name":"Cave Gnomes",
             "type": "0",
             "room_id":"Inner Hall",
             "description":"winged gnome-like beings fly around the halls",
@@ -40,9 +41,11 @@
             "health":"50",
             "strength":"30"
 
+
         },
+        
         {
-            "name":"lizardmen",
+            "name":"Lizardmen",
             "type": "0",
             "room_id":"Level 1 Courtyard",
             "description":"A large reptilian humanoid stands before you",
@@ -51,6 +54,18 @@
             "strength":"70"
 
         },
+    
+        {
+            "name":"Harvestman",
+            "type": "0",
+            "room_id":"Blood Pit",
+            "description":"Beware of the harvestman...",
+            "aglity":"150",
+            "health":"50",
+            "strength":"180"
+
+        },
+
         {
             "name":"The old god of fear and hunger",
             "type": "0",
@@ -61,21 +76,12 @@
             "strength":"180"
 
         },
-        {
-            "name":"harvestman",
-            "type": "0",
-            "room_id":"Blood Pit",
-            "description":"Beware of the harvestman...",
-            "aglity":"150",
-            "health":"50",
-            "strength":"180"
 
-        },
         {
-            "name":"lord of the flies",
+            "name":"Lord of The Flies",
             "type": "0",
             "room_id":"Basement",
-            "description":"A strange, soulless creature wanders the basement looking for any victims to  snatch and take away",
+            "description":"A strange, soulless creature wanders the basement looking for any victims to snatch and take away",
             "aglity":"80",
             "health":"125",
             "strength":"90"

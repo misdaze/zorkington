@@ -228,7 +228,6 @@ public class Game {
     else if (commandWord.equals("look")){
       HostileDescription(currentRoom.Ghostile());
     }
-
     else if (commandWord.equals("status"))
       stati(command);
       else if (commandWord.equals("map"))
@@ -367,8 +366,17 @@ boolean block = false;
 
 
 while(Hhealth > 0 && healthPoints > 0){
-  
+  boolean mrbcrit = false;
   int damage = hostile.fight();
+  String RED = "\u001B[31m";
+  String RESET = "\u001B[0m";
+  if (hostile.Rname().equals("Mr. B")){
+    int rng = (int)(Math.random()*5);
+    if (rng == 5){
+      mrbcrit = true;
+      System.out.println(hostile.Rname() + " has a terrifying glint in his eye.");
+    }
+  }
   
   if(damage == 0)
   System.out.println(hostile.Rname() + " has attacked you but missed!");
@@ -380,6 +388,10 @@ while(Hhealth > 0 && healthPoints > 0){
 
   else{
     System.out.println(hostile.Rname() + " has smacked you ");
+    if (mrbcrit){
+      healthPoints = healthPoints - damage;
+      System.out.println("Mr. B has landed a" + RED + " critical hit! " + RESET + "You feel dread wash over you.");
+    }
     healthPoints = healthPoints - damage;
    
   }
