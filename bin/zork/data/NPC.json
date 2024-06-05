@@ -4,7 +4,7 @@
             "name":"wolves",
             "type": "0",
             "room_id":"Courtyard",
-            "description":"a pack of wovles searching for their next meal",
+            "description":"A pack of wolves searching for their next meal.",
             "aglity":"100",
             "health":"100",
             "strength":"20"
