@@ -52,10 +52,10 @@
     {
     "id": "Level 1 Entrance Door",
     "mapIdentifier": 3,
-    "x1": 0,
-      "x2": 0,
-      "y1": 0,
-      "y2": 0,
+    "x1": 977,
+      "x2": 1464,
+      "y1": 872,
+      "y2": 1133,
       "name": "Level 1 Entrance Door",
       "description": "You enter to be met with a door twice your height. Who knows what lies beyond it?",
       "exits": [
@@ -70,10 +70,10 @@
       {
       "id": "Kitchen",
       "mapIdentifier": 4,
-      "x1": 0,
-      "x2": 0,
-      "y1": 0,
-      "y2": 0,
+      "x1": 1123,
+      "x2": 1464,
+      "y1": 745,
+      "y2": 1047,
       "name": "Kitchen",
       "description": "The destroyed remnants of what used to be an incredible kitchen. Full of drawers and cabinets to look through.",
       "exits": [
@@ -88,10 +88,10 @@
       {
         "id": "Level 1 Courtyard",
         "mapIdentifier": 5,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1200,
+        "x2": 1672,
+        "y1": 586,
+        "y2": 888,
         "name": "Level 1 Courtyard",
         "description": "A small field of green grass. A farming scythe is lodged in the ground in the middle of the room.",
         "exits": [
@@ -114,10 +114,10 @@
       {
         "id": "Inner Hall",
         "mapIdentifier": 6,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1074,
+        "x2": 1671,
+        "y1": 484,
+        "y2": 730,
         "name": "Inner Hall",
         "description": "A set of long winding hallways. How long does it go on for?",
         "exits": [
@@ -154,10 +154,10 @@
       {
         "id": "Music Room",
         "mapIdentifier": 7,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 876,
+        "x2": 1197,
+        "y1": 664,
+        "y2": 778,
         "name": "Music Room",
         "description":  "A large room filled with seats, instruments and music stands. Unlike the rest of the dungeon, every inch of the room is kept in pristine condition. A bald man sits behind a desk at the front of the room. A nameplate sits on his desk, reading 'Mr. Bellissimo'",
         "exits": [
@@ -174,10 +174,10 @@
       {
         "id": "Blood Pit",
         "mapIdentifier": 8,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1408,
+        "x2": 1726,
+        "y1": 300,
+        "y2": 579,
         "name": "Blood Pit",
         "description":  "A massive chasm flooded by the smell of blood and rot. You can make out a sword in the distance, lodged in the ground. It becomes harder to breathe with each step you take towards it. A dead body lies in front of you, having carved a message before dying. It reads 'THE LEGENDARY MIASMA LIES AHEAD, TAME IT OR DIE TRYING.'",
         "exits":[
@@ -194,10 +194,10 @@
       {
         "id": "Prison",
         "mapIdentifier": 9,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1589,
+        "x2": 1939,
+        "y1": 300,
+        "y2": 459,
         "name": "Prison",
         "description":  "A murky underground cell block guarded by powerful guards. A toolbox sits in the corner of the room, labeled 'TORTURE DEVICES'",
         "exits":[
@@ -221,10 +221,10 @@
       {
         "id": "Boss Room",
         "mapIdentifier": 10,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1788,
+        "x2": 1939,
+        "y1": 424,
+        "y2": 617,
         "name": "Boss Room",
         "description":  "A dark room full of tall columns. Strange artworks and writing is engraved in each wall. A tall, mangled creature sits upon a throne in the center of the arena. Before you even take a breath, it stands up and starts running towards you, blade in hand. It is time to face the king of the dungeon. There's also an egg next to the door but you probably have bigger concerns at the moment.",
         "exits":[
@@ -234,10 +234,10 @@
       {
         "id": "Basement",
         "mapIdentifier": 11,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1727,
+        "x2": 1937,
+        "y1": 300,
+        "y2": 450,
         "name": "Basement",
         "description":  "You enter to find yourself in a dark and dirty basement full of random garbage.",
         "exits":[
@@ -254,10 +254,10 @@
       {
         "id": "Library",
         "mapIdentifier": 12,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 1075,
+        "x2": 1336,
+        "y1": 374,
+        "y2": 595,
         "name": "Library",
         "description": "A grand library full of books from wall to wall. There's a lantern strung up against the wall within arm's reach. Who knows how many years worth of information is stored within here?",
         "exits": [
@@ -273,10 +273,10 @@
         {
           "id": "Backyard",
           "mapIdentifier": 13,
-          "x1": 0,
-          "x2": 0,
-          "y1": 0,
-          "y2": 0,
+          "x1": 1075,
+          "x2": 1263,
+          "y1": 254,
+          "y2": 487,
           "name": "Backyard",
           "description": "A damaged garden ravaged by monsters, a fraction of its former beauty. A picnic basket sits on the ground in the middle of the field. There's a small hole in the wall.",
           "exits": [
@@ -298,10 +298,10 @@
           {
             "id": "Hidden Backyard",
             "mapIdentifier": 14,
-            "x1": 0,
-            "x2": 0,
-            "y1": 0,
-            "y2": 0,
+            "x1": 909,
+            "x2": 1263,
+            "y1": 51,
+            "y2": 362,
             "name": "Hidden Backyard",
             "description":"You crawl through the cave to find a hidden staircase, making way to a small garden full of vibrant plant life. A detailed statue of a warrior stands in the center for all to see. The statue holds a fine blade that looks like it could be pried from its hand.",
             "exits":[
@@ -319,10 +319,10 @@
           {
       "id": "Level 1 Stairway",
       "mapIdentifier": 15,
-      "x1": 0,
-      "x2": 0,
-      "y1": 0,
-      "y2": 0,
+      "x1": 481,
+      "x2": 809,
+      "y1": 1082,
+      "y2": 1348,
       "name": "Level 1 Stairway",
       "description": "A dark and murky staircase. Who knows where it leads to?",
       "exits": [
@@ -340,10 +340,10 @@
     {
       "id": "Closet",
       "mapIdentifier": 16,
-      "x1": 0,
-      "x2": 0,
-      "y1": 0,
-      "y2": 0,
+      "x1": 193,
+      "x2": 671,
+      "y1": 913,
+      "y2": 1238,
       "name": "Closet",
       "description": "A closet full of extravagant items and clothes.",
       "exits": [
@@ -377,10 +377,10 @@
       {
         "id": "Locked Room",
         "mapIdentifier": 17,
-        "x1": 0,
-        "x2": 0,
-        "y1": 0,
-        "y2": 0,
+        "x1": 465,
+        "x2": 725,
+        "y1": 857,
+        "y2": 1095,
         "name": "Locked Room",
         "description": "An dark room full of lockers and random objects.",
         "exits": [
