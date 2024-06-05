@@ -259,7 +259,7 @@ public class Game {
    
     int id = currentRoom.getNum();
     int[] array = things.get(id-1);
-    System.out.println(array[0]);
+    //System.out.println(array[0]);
     String dir = System.getProperty("user.dir");
     File file_open = new File(dir+"\\image.jpg");  
     Path copied = Paths.get(dir+"\\SACRIFICE.jpg");
