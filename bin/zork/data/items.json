@@ -344,7 +344,7 @@
         "id": "fancybox1",
         "name": "Ornate Box",
         "description": "A worn down box with a velvet surface, covered with elaborate gold accents and detailing. Probably owned by someone of high status.",
-        "room_id": "1flyRoom",
+        "room_id": "Closet",
         "weight":"10000",
         "isOpenable": "true"
         },

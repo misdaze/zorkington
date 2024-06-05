@@ -17,7 +17,7 @@
         "name": "Axe",
         "description": "A typical multi-purpose hand axe.",
         "room_id":"Courtyard",
-        "weight":"10",
+        "weight":"7",
         "isOpenable":"false",
         "isCursable":"true"
         },
@@ -25,10 +25,10 @@
         "itemtype":"Weapon",
         "weaponType":"Greatsword",
         "id": "longsword",
-        "name": "Courtyard",
+        "name": "Longsword",
         "description": "A long iron sword. The balance of the blade feels good.",
-        "room_id":"Hallway",
-        "weight":"15",
+        "room_id":"Courtyard",
+        "weight":"10",
         "isOpenable":"false"
         },
         {
@@ -61,23 +61,13 @@
         "weight":"3",
         "isOpenable":"false"
         },
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Blunt",
-        "id": "morningstar",
-        "name": "Morningstar",
-        "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
-        "room_id":"1InnerHall",
-        "weight":"17",
-        "isOpenable":"false"
-        },
         { 
         "itemtype":"Weapon",
         "weaponType":"Misc",       
         "id": "boneshears",
         "name": "Bone Shears",
         "description": "Rusty scissors that are a little hard to use. Slow but capable of causing immense damage.",
-        "room_id":"1Backyard",
+        "room_id":"Backyard",
         "weight":"5",
         "isOpenable":"false"
         },  
@@ -90,16 +80,6 @@
         "room_id":"Hallway",
         "weight":"13",
         "isOpenable":"false"
-        },  
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Greatsword",
-        "id": "sharktooth",
-        "name": "Shark Teeth",
-        "description": "A crude makeshift saw made from razor-sharp teeth.",
-        "room_id":"Hallway",
-        "weight":"25",
-        "isOpenable":"false"
         },
         {
         "itemtype":"Weapon",
@@ -107,18 +87,8 @@
         "id": "warscythe",
         "name": "Shark Teeth",
         "description": "A large scythe. Capable of damaging multiple enemies at once.",
-        "room_id":"Hallway",
+        "room_id":"Level 1 Courtyard",
         "weight":"18",
-        "isOpenable":"false"
-        },
-        {
-        "itemtype":"Weapon",
-       "weaponType":"Greatsword",
-        "id": "claymore",
-        "name": "Claymore",
-        "description": "A large two handed sword. Packs a punch.",
-        "room_id":"Hallway",
-        "weight":"19",
         "isOpenable":"false"
         },
         {
@@ -127,7 +97,7 @@
         "id": "easternsword",
         "name": "Eastern Sword",
         "description": "A delicate blade hailing from the far east. Sharp but fragile.",
-        "room_id":"Hallway",
+        "room_id":"Hidden Backyard",
         "weight":"12",
         "isOpenable":"false"
         },  
@@ -143,36 +113,6 @@
         },
         {
         "itemtype":"Weapon",
-        "weaponType":"Blunt",
-        "id": "skeleton",
-        "name": "Skeletal Arm",
-        "description": "An arm taken from a skeleton. Why would you want to use this?",
-        "room_id":"Hallway",
-        "weight":"3",
-        "isOpenable":"false"
-        },
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Greatsword",
-        "id": "crudesword",
-        "name": "Crude Sword",
-        "description": "A massive jagged longsword. How do you even hold this thing?",
-        "room_id":"Hallway",
-        "weight":"20",
-        "isOpenable":"false"
-        },
-        {
-        "itemtype":"Weapon",
-        "weaponType":"Spear",
-        "id": "sergal",
-        "name": "Sergal Spear",
-        "description": "A heavy throwing spear used by sergal tribes from the west.",
-        "room_id":"Hallway",
-        "weight":"15",
-        "isOpenable":"false"
-        },
-        {
-        "itemtype":"Weapon",
         "weaponType":"Greatsword",
         "id": "miasma",
         "name": "Miasma",
@@ -184,18 +124,10 @@
 
 
         {
-        "id": "tinder",
-        "name": "Firestarting Kit",
-        "description": "A box full of firestarting tools. Fires keep fear in check and offer warmth and safety.",
-        "item_id":"toolbox1",
-        "weight":"2",
-        "isOpenable":"false"
-        },
-        {
         "id": "torch",
         "name": "Torch",
         "description": "A long stick wrapped with thick rags to prolong its burning.",
-        "room_id":"1entrance",
+        "room_id":"Level 1 Entrance",
         "weight":"4",
         "isOpenable":"false"
         },
@@ -219,7 +151,7 @@
         "id": "SanePot",
         "name": "Potion of Sanity",
         "description": "A potion that recovers your sanity completely. You're gonna need it.",
-        "room_id":"2BloodPit",
+        "room_id":"cabinet1",
         "weight":"2",
         "isOpenable":"false"
         },
@@ -227,7 +159,7 @@
         "id": "StrengthPot",
         "name": "Potion of Strength",
         "description": "A strong-smelling vial that strengthens your body.",
-        "room_id":"cabinet1",
+        "room_id":"Blood Pit",
         "weight":"2",  
         "isOpenable":"false"
         },
@@ -235,8 +167,8 @@
         "id": "talisman",
         "name": "Purifying Talisman",
         "description": "A paper talisman with markings that originate from Eastern Sanctuaries. Using it grants you immunity to the next attack.",
-        "room_id":"1Backyard",
-        "weight":"10",
+        "room_id":"Backyard",
+        "weight":"2",
         "isOpenable":"false",
         "isCursable":"true"
         },  
@@ -245,7 +177,7 @@
         "name": "Priest's Lantern",
         "description": "A lantern from a dark priest. You can toss it at your enemies for a small fire attack.",
         "room_id":"1Library",
-        "weight":"10",
+        "weight":"4",
         "isOpenable":"false"
         },  
         {
@@ -278,7 +210,7 @@
         "id": "egg",
         "name": "Egg",    
         "description": "An egg. What did you think it was?",
-        "room_id":"Hallway",
+        "room_id":"Boss Room",
         "weight":"2",
         "isOpenable":"false"
         },
@@ -294,7 +226,15 @@
         "id": "tomato",
         "name": "Tomato",
         "description": "A hearty round tomato. Good for humiliating bad performers.",
-        "room_id":"Hallway",
+        "item_id":"picnicbasket1",
+        "weight":"3",
+        "isOpenable":"false"
+        },
+        {
+        "id": "sandwich",
+        "name": "Sandwich",
+        "description": "A massive sandwich the size of your arm held together with a single toothpick. What is that thing made of??",
+        "item_id":"picnicbasket1",
         "weight":"3",
         "isOpenable":"false"
         },
@@ -310,7 +250,7 @@
         "id": "body",
         "name": "Dead Body",
         "description": "A rotting dead body with stab wounds from head to toe. Desperate times call for desperate measures...",
-        "room_id":"2BloodPit",
+        "room_id":"Blood Pit",
         "weight":"3",
         "isOpenable":"false"
         },
@@ -320,7 +260,7 @@
         "id": "cabinet1",
         "name": "Kitchen Cabinet",
         "description": "A damaged wooden cabinet. Who knows what's inside?",
-        "room_id": "1kitchen",
+        "room_id": "Kitchen",
         "weight":"10000",
         "isOpenable": "true"
         },
@@ -328,7 +268,7 @@
         "id": "drawer1",
         "name": "Kitchen Drawer",
         "description": "A run-down drawer. Who knows what's inside?",
-        "room_id": "1kitchen",
+        "room_id": "Kitchen",
         "weight":"10000",
         "isOpenable": "true"
         },
@@ -336,7 +276,7 @@
         "id": "toolbox1",
         "name": "Rusty Toolbox",
         "description": "A rusty handheld toolbox",
-        "room_id": "3Prison",
+        "room_id": "Prison",
         "weight":"10000",
         "isOpenable": "true"
         },
@@ -344,7 +284,7 @@
         "id": "fancybox1",
         "name": "Ornate Box",
         "description": "A worn down box with a velvet surface, covered with elaborate gold accents and detailing. Probably owned by someone of high status.",
-        "room_id": "1flyRoom",
+        "room_id": "Closet",
         "weight":"10000",
         "isOpenable": "true"
         },
@@ -352,7 +292,7 @@
         "id": "picnicbasket1",
         "name": "Picnic Basket",
         "description": "A small picnic basket full of assorted foods. Cute.",
-        "room_id": "1Backyard",
+        "room_id": "Backyard",
         "weight":"10000",
         "isOpenable": "true"
         }        

@@ -8,7 +8,7 @@
       "y1": 1134,
       "y2": 1291,
       "name": "Courtyard",
-      "description": "Have fun!",
+      "description": "You wake up in a luscious green courtyard full of plants and animals. Past the bushes, you can see what appears to be a small cave entrance surrounded by strange fog and gloom. An assortment of weapons are laid out ahead of you, so choose wisely.",
       "exits": [
         {
           "isLocked": false,
@@ -32,7 +32,7 @@
       "y1": 1031,
       "y2": 1213,
       "name": "Level 1 Entrance",
-      "description": "You are in a dungeon",
+      "description": "You travel through the cave to find yourself in a near pitch-black room. If only there were a light source nearby.",
       "exits": [
         {
           "isLocked": false,
@@ -57,7 +57,7 @@
       "y1": 0,
       "y2": 0,
       "name": "Level 1 Entrance Door",
-      "description": "Ogres are around",
+      "description": "You enter to be met with a door twice your height. Who knows what lies beyond it?",
       "exits": [
         {
           "isLocked": false,
@@ -75,7 +75,7 @@
       "y1": 0,
       "y2": 0,
       "name": "Kitchen",
-      "description": "beware of this room",
+      "description": "The destroyed remnants of what used to be an incredible kitchen.",
       "exits": [
         {
           "isLocked": false,
@@ -93,7 +93,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Level 1 Courtyard",
-        "description": "so peaceful",
+        "description": "A small field of green grass.",
         "exits": [
           {
             "isLocked": true,
@@ -119,7 +119,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Inner Hall",
-        "description": "It might be still possible to escape these dungeons",
+        "description": "A set of long winding hallways. It might be still possible to escape these dungeons",
         "exits": [
           {
             "isLocked": false,
@@ -159,7 +159,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Music Room",
-        "description":  "hello mr B!",
+        "description":  "A large room filled with seats, instruments and music stands. Unlike the rest of the dungeon, every inch of the room is kept in pristine condition. A bald man sits behind a desk at the front of the room. A nameplate sits on his desk, reading 'Mr. Bellissimo'",
         "exits": [
           {
             "isLocked": false,
@@ -179,7 +179,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Blood Pit",
-        "description":  "wet ground feels squishy underneath your feet",
+        "description":  "A massive chasm flooded by the smell of blood and rot you can make out a strange object in the distance. It becomes harder to breathe with each step you take towards it.",
         "exits":[
           {
             "isLocked": false,
@@ -199,7 +199,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Prison",
-        "description":  "beware of the guards",
+        "description":  "A murky underground cell block guarded by powerful guards.",
         "exits":[
           {
             "isLocked": false,
@@ -226,7 +226,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Boss Room",
-        "description":  "Final level",
+        "description":  "A dark room full of tall columns. Strange artworks and writing is engraved in each wall. A tall, mangled creature sits upon a throne in the center of the arena. Before you even take a breath, it senses your presence and prepares for battle. How will you fare against the king of the dungeon?",
         "exits":[
 
         ]
@@ -239,7 +239,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Basement",
-        "description":  "an ominous aura fill the hallways",
+        "description":  "You enter to find yourself in a dark and dirty basement full of random garbage.",
         "exits":[
           {
             "isLocked": true,
@@ -259,7 +259,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Library",
-        "description": "",
+        "description": "A grand library full of books from wall to wall. Who knows how many years worth of information is stored within here?",
         "exits": [
           {
             "isLocked": false,
@@ -278,7 +278,7 @@
           "y1": 0,
           "y2": 0,
           "name": "Backyard",
-          "description": "Does the mist carry tiny spores in it?",
+          "description": "A damaged garden ravaged by monsters, a fraction of its former beauty. There's a small hole in the wall.",
           "exits": [
             {
               "isLocked": true,
@@ -303,7 +303,7 @@
             "y1": 0,
             "y2": 0,
             "name": "Hidden Backyard",
-            "description":"Does the mist carry tiny spores in it?",
+            "description":"You crawl through the cave to find a hidden staircase, making way to a small garden full of vibrant plant life. A detailed statue of a warrior stands in the center for all to see.",
             "exits":[
               {
               "isLocked": false,
@@ -324,7 +324,7 @@
       "y1": 0,
       "y2": 0,
       "name": "Level 1 Stairway",
-      "description": "You are in a blue bathroom",
+      "description": "A dark and murky staircase. Who knows where it leads to?",
       "exits": [
         {
           "isLocked": false,
@@ -345,7 +345,7 @@
       "y1": 0,
       "y2": 0,
       "name": "Closet",
-      "description": "It is dark.",
+      "description": "A closet full of extravagant items and clothes.",
       "exits": [
         {
           "isLocked": true,
@@ -382,7 +382,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Locked Room",
-        "description": "An ameoba awaits",
+        "description": "An dark room full of lockers and random objects.",
         "exits": [
 
 
