@@ -419,7 +419,7 @@ while(Hhealth > 0 && healthPoints > 0){
       }
     }
       if (Hhealth <= 0){
-      System.out.println(" you have killed" + hostile.Rname());
+      System.out.println(" you have killed " + hostile.Rname());
         currentRoom.RemoveH();
       }
 
