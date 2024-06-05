@@ -259,7 +259,7 @@
         "y1": 0,
         "y2": 0,
         "name": "Library",
-        "description": "A grand library full of books from wall to wall. Who knows how many years worth of information is stored within here?",
+        "description": "A grand library full of books from wall to wall. There's a lantern strung up against the wall within arm's reach. Who knows how many years worth of information is stored within here?",
         "exits": [
           {
             "isLocked": false,
@@ -278,7 +278,7 @@
           "y1": 0,
           "y2": 0,
           "name": "Backyard",
-          "description": "A damaged garden ravaged by monsters, a fraction of its former beauty. There's a small hole in the wall.",
+          "description": "A damaged garden ravaged by monsters, a fraction of its former beauty. A picnic basket sits on the ground in the middle of the field. There's a small hole in the wall.",
           "exits": [
             {
               "isLocked": true,

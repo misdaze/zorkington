@@ -117,7 +117,7 @@
         "id": "miasma",
         "name": "Miasma",
         "description": "An otherworldly sword that oozes toxic gases. The sword is said to house the strength of six men.",
-        "room_id":"2BloodPit",
+        "room_id":"Blood Pit",
         "weight":"30",
         "isOpenable":"false"
         },
@@ -135,7 +135,7 @@
         "id": "luckycoin",
         "name": "Lucky Coin",
         "description": "A coin that can be used in dire situations. Flipping it and choosing heads or tails can greatly boost stats and luck.",
-        "room_id":"1HiddenBackyard",
+        "room_id":"fancybox1",
         "weight":"1",
         "isOpenable":"false"
         },
@@ -176,7 +176,7 @@
         "id": "lantern",
         "name": "Priest's Lantern",
         "description": "A lantern from a dark priest. You can toss it at your enemies for a small fire attack.",
-        "room_id":"1Library",
+        "room_id":"Library",
         "weight":"4",
         "isOpenable":"false"
         },  
@@ -208,6 +208,7 @@
 
         {
         "id": "egg",
+        "item_type":"food",
         "name": "Egg",    
         "description": "An egg. What did you think it was?",
         "room_id":"Boss Room",
@@ -216,6 +217,7 @@
         },
         {
         "id": "milk",
+        "item_type":"food",
         "name": "Milk",
         "description": "A vial full of yellowish milk. Ew.",
         "room_id":"Hallway",
@@ -223,7 +225,17 @@
         "isOpenable":"false"
         },
         {
+        "id": "bread",
+        "item_type":"food",
+        "name": "Bread",
+        "description": "A loaf of bread. Looks tasty.",
+        "item":"drawer1",
+        "weight":"3",
+        "isOpenable":"false"
+        },
+        {
         "id": "tomato",
+        "item_type":"food",
         "name": "Tomato",
         "description": "A hearty round tomato. Good for humiliating bad performers.",
         "item_id":"picnicbasket1",
@@ -232,6 +244,7 @@
         },
         {
         "id": "sandwich",
+        "item_type":"food",
         "name": "Sandwich",
         "description": "A massive sandwich the size of your arm held together with a single toothpick. What is that thing made of??",
         "item_id":"picnicbasket1",
@@ -240,6 +253,7 @@
         },
         {
         "id": "meat",
+        "item_type":"food",
         "name": "Dried Meat",
         "description": "A rusty can of meat strips dried to prevent spoiling",
         "item_id":"cabinet1",
@@ -248,6 +262,7 @@
         },
         {
         "id": "body",
+        "item_type":"food",
         "name": "Dead Body",
         "description": "A rotting dead body with stab wounds from head to toe. Desperate times call for desperate measures...",
         "room_id":"Blood Pit",
