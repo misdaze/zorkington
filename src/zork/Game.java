@@ -2,6 +2,7 @@ package zork;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,17 +12,21 @@ import java.util.HashMap;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Desktop;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.awt.List;
 
 public class Game {
 
   public static HashMap<String, Room> roomMap = new HashMap<String, Room>();
-
   private Parser parser;
   private Room currentRoom;
   private int healthPoints = 100;
@@ -31,15 +36,18 @@ public class Game {
   private String wellbeingSanity = "Perfect";
 
   /**
-   * Create the game and initialise its internal map.
+   * Create the game and initialise gits internal map.
    */
   public Game() {
     try {
+      coordsort();
       initRooms("src\\zork\\data\\rooms.json");
-      initItems("src\\zork\\data\\items.json");
-      initNPCs("src\\zork\\data\\npcs.json");
+      //initItems("src\\zork\\data\\items.json"); FIX UR INVENTORY / ITEM PARSER DRAKE AND RYAN!!!!!!!!!!!!!!!!
+      //initNPCs("src\\zork\\data\\NPC.json"); FIX UR NPC PARSER TING!!!! I CANT TEST THE GAME!!!! DAMN!!!!!!
+     // System.out.println(roomMap.get("Courtyard") + " t1");
+      currentRoom = roomMap.get("Courtyard");
+      //System.out.println(currentRoom + " t2");
 
-      currentRoom = roomMap.get("Bedroom");
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -80,6 +88,25 @@ public class Game {
      
     }
   }
+  private int[] coordsgetter(int map) throws IOException, ParseException{
+    Path path = Path.of("src\\zork\\data\\rooms.json");
+    String jsonString = Files.readString(path);
+    JSONParser parser = new JSONParser();
+    JSONObject json = (JSONObject) parser.parse(jsonString);
+    JSONArray jsonRooms = (JSONArray) json.get("rooms");
+    JSONObject id = (JSONObject) jsonRooms.get(map);
+   // int mapnum = (int)  ((JSONObject) id).get("mapIdentifier");
+      Long xL = (Long)((JSONObject) id).get("x1");
+      Long xxL = (Long)((JSONObject) id).get("x2");
+      Long yL = (Long)((JSONObject) id).get("y1");
+      Long yyL = (Long)((JSONObject) id).get("y2");
+      int x = Math.toIntExact(xL);
+      int xx = Math.toIntExact(xxL);
+      int y = Math.toIntExact(yL);
+      int yy = Math.toIntExact(yyL);
+      int[] a = {x,xx,y,yy};
+      return a;
+  }
 
   private void initRooms(String fileName) throws Exception {
     Path path = Path.of(fileName);
@@ -95,10 +122,14 @@ public class Game {
       String roomName = (String) ((JSONObject) roomObj).get("name");
       String roomId = (String) ((JSONObject) roomObj).get("id");
       String roomDescription = (String) ((JSONObject) roomObj).get("description");
+      Long xL = (Long)((JSONObject) roomObj).get("mapIdentifier");
+      int x = Math.toIntExact(xL);
       room.setDescription(roomDescription);
       room.setRoomName(roomName);
+      room.setroomnum(x);
 
       JSONArray jsonExits = (JSONArray) ((JSONObject) roomObj).get("exits");
+      //System.out.println(jsonExits);
       ArrayList<Exit> exits = new ArrayList<Exit>();
       for (Object exitObj : jsonExits) {
         String direction = (String) ((JSONObject) exitObj).get("direction");
@@ -111,7 +142,7 @@ public class Game {
       }
       room.setExits(exits);
       roomMap.put(roomId, room);
-      System.out.println(roomName);
+    //  System.out.println(roomName);
     }
   }
 
@@ -132,14 +163,15 @@ public class Game {
     int weight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
     Boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
     Item item = new Item(weight, name, isOpenable, desc, id, itemtype, room_id);
-    if (room_id != null)
-      roomMap.get(room_id).getInventory().addItem(item);
+   // if (room_id != null)
+     // roomMap.get(room_id).getInventory().addItem(item);
 }
  } 
   /**
    * Main play routine. Loops until end of play.
+   * @throws ParseException 
    */
-  public void play() {
+  public void play() throws ParseException {
     printWelcome();
 
     boolean finished = false;
@@ -166,15 +198,17 @@ public class Game {
     System.out.println("Type 'freak' if you need ''Help'' 😏.");
     System.out.println();
     //System.out.println("Working Directory = " + System.getProperty("user.dir"));
-    mappings();
+    // mappings();
     //System.out.println(currentRoom.longDescription());
   }
 
   /**
    * Given a command, process (that is: execute) the command. If this command ends
    * the game, true is returned, otherwise false is returned.
+   * @throws ParseException 
+   * @throws IOException 
    */
-  private boolean processCommand(Command command) {
+  private boolean processCommand(Command command) throws IOException, ParseException {
     if (command.isUnknown()) {
       System.out.println("I don't know what you mean...");
       return false;
@@ -191,6 +225,8 @@ public class Game {
       }
     }else if (commandWord.equals("status"))
       stati(command);
+      else if (commandWord.equals("map"))
+      mappings();
     else if (commandWord.equals("quit")) {
       if (command.hasSecondWord())
         System.out.println("Quit what?");
@@ -209,6 +245,9 @@ public class Game {
    * and a list of the command words.
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c92542d0ed6af28b38c853a8161575ca3294eda
   public ArrayList<int[]> things = new ArrayList<int[]>();
   private void coordsort() throws IOException, ParseException {
     for (int i = 0; i < 17; i++) {
@@ -225,36 +264,36 @@ public class Game {
     int id = currentRoom.getNum();
     int[] array = things.get(id-1);
     //System.out.println(array[0]);
+<<<<<<< HEAD
 =======
   private void mappings() {
 >>>>>>> 942593bf23a3cb14fdb1702cdd90923e6dcb1ec7
+=======
+>>>>>>> 1c92542d0ed6af28b38c853a8161575ca3294eda
     String dir = System.getProperty("user.dir");
-    File file_open = new File(dir+"\\image.png");  
-    Path copied = Paths.get(dir+"\\SACRIFICE.png");
+    File file_open = new File(dir+"\\image.jpg");  
+    Path copied = Paths.get(dir+"\\SACRIFICE.jpg");
     Path originalPath = file_open.toPath();
-    File copycheck = new File(dir+"\\SACRIFICE.png");
-      try {
-        boolean result = Files.deleteIfExists(copycheck.toPath());
-        System.out.println(result);
-      } catch (IOException e) {
-        // TODO Auto-generated catch block
-        System.out.println("couldnt del");
-        e.printStackTrace();
-      }
-    try {
-      Files.copy(originalPath, copied, StandardCopyOption.COPY_ATTRIBUTES);
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }           
+    File copycheck = new File(dir+"\\SACRIFICE.jpg");
+
+    Files.deleteIfExists(copycheck.toPath());
+    Files.copy(originalPath, copied, StandardCopyOption.COPY_ATTRIBUTES);
+
+      BufferedImage img = ImageIO.read(copycheck);
+      BufferedImage readtomap = new BufferedImage(
+      img.getWidth(),img.getHeight(), BufferedImage.TYPE_INT_ARGB);   
+      Graphics2D g = readtomap.createGraphics();
+      g.drawImage(img, 0, 0, null);
+      g.dispose();
+      BufferedImage subimg = readtomap.getSubimage(array[0], array[2], (array[1]-array[0]), (array[3]-array[2]));
       JFrame frame = new JFrame("Minimap");
-        frame.setSize(600, 600);  
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
         frame.setVisible(true);
-        ImageIcon map = new ImageIcon(dir+"\\SACRIFICE.png");
-        frame.add(new JLabel(map));
+        frame.setResizable(false);
+        frame.setAlwaysOnTop(true);
+        frame.getContentPane().add(new JLabel(new ImageIcon(subimg)));
         frame.pack();
-  }
+
+  } 
   private void printHelp() {
     System.out.println("You are lost. You are alone. You wander");
     System.out.println("around at Monash Uni, Peninsula Campus.");
@@ -336,11 +375,13 @@ while(Hhealth > 0 && healthPoints > 0){
     System.out.println("1 to attack ");
     System.out.println("2 to block");
     int player = parser.getOption(1, 2);
-  
+    // if (player = 1){
+    // s
     
     }
 }
- 
+
+
 
 
   /**
@@ -359,8 +400,10 @@ while(Hhealth > 0 && healthPoints > 0){
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
 
-    if (nextRoom == null)
+    if (nextRoom == null){
       System.out.println("There is no door!");
+      System.out.println("Your exits are: " + currentRoom.exitString());
+    }
     else {
       currentRoom = nextRoom;
       System.out.println(currentRoom.longDescription());

@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Room {
 
   private String roomName;
+  private int roomnumber;
   private String description;
   private ArrayList<Exit> exits;
   private Inventory inventory;
   private ArrayList<NPC> npcs;
-
 
   
   public ArrayList<Exit> getExits() {
@@ -86,8 +86,8 @@ public class Room {
    * Return a string describing the room's exits, for example "Exits: north west
    * ".
    */
-  private String exitString() {
-    String returnString = "Exits: ";
+  public String exitString() {
+    String returnString = "";
     for (Exit exit : exits) {
       returnString += exit.getDirection() + " ";
     }
@@ -105,7 +105,7 @@ public class Room {
 
         if (exit.getDirection().equalsIgnoreCase(direction)) {
           String adjacentRoom = exit.getAdjacentRoom();
-
+          System.out.println(Game.roomMap.get(adjacentRoom));
           return Game.roomMap.get(adjacentRoom);
         }else{
           return null;
@@ -132,7 +132,6 @@ public class Room {
   public String getRoomName() {
     return roomName;
   }
-
   public void setRoomName(String roomName) {
     this.roomName = roomName;
   }
@@ -143,5 +142,11 @@ public class Room {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+  public int getNum(){
+    return roomnumber;
+  }
+  public void setroomnum(int rn){
+    this.roomnumber = rn;
   }
 }
