@@ -13,92 +13,122 @@
         {
             "name":"guard",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Level 1 Entrance Door",
+            "description":"There seems to be a large guard sitting by the door",
+            "aglity":"40",
+            "health":"150",
+            "strength":"60"
+            
 
         },
         {
-            "name":"Elite guards",
+            "name":"evil walter",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Kitchen",
+            "description":"we need to cook jessie",
+            "aglity":"50",
+            "health":"115",
+            "strength":"55"
 
         },
         {
             "name":"cave Gnomes",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
-
-        },
-        {
-            "name":"Ghouls",
-            "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
-
-        },
-        {
-            "name":"dark priests ",
-            "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Inner Hall",
+            "description":"winged gnome-like beings fly around the halls",
+            "aglity":"150",
+            "health":"50",
+            "strength":"30"
 
         },
         {
             "name":"lizardmen",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Level 1 Courtyard",
+            "description":"A large reptilian humanoid stands before you",
+            "aglity":"40",
+            "health":"150",
+            "strength":"70"
 
         },
         {
-            "name":"nightlurches",
+            "name":"The old god of fear and hunger",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
-
-        },
-        {
-            "name":"yellow mage",
-            "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Boss Room",
+            "description":" the Ancient One rushes towards you , a pure creature with a soul that radiates the light of an older god",
+            "aglity":"50",
+            "health":"210",
+            "strength":"180"
 
         },
         {
             "name":"harvestman",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Blood Pit",
+            "description":"Beware of the harvestman...",
+            "aglity":"150",
+            "health":"50",
+            "strength":"180"
 
         },
         {
             "name":"lord of the flies",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Basement",
+            "description":"A strange, soulless creature wanders the basement looking for any victims to  snatch and take away",
+            "aglity":"80",
+            "health":"125",
+            "strength":"90"
 
         },
         {
             "name":"wandering nard",
-            "type": "1",
-            "room_id":"Entrance",
-            "description":"A"
-
-        },
-        {
-            "name":"cave Dwellers",
-            "type": "1",
-            "room_id":"Entrance",
-            "description":"A"
+            "type": "0",
+            "room_id":"Prison",
+            "description":"You see a small humanoid creature on the ground, who knows what horrors its committed",
+            "aglity":"10",
+            "health":"20",
+            "strength":"5"
 
         },
         {
             "name":"Mr. B",
             "type": "0",
-            "room_id":"Entrance",
-            "description":"A"
+            "room_id":"Music Room",
+            "description":"Mr. B sits quietly while polishing his trumpet, you can feel his immense aura ",
+            "aglity":"150",
+            "health":"350",
+            "strength":"80"
+
+        },
+        {
+            "name":"remains of Manocha",
+            "type": "0",
+            "room_id":"Library",
+            "description":"The remains of a lengendary punker rests here, his lingering spirit is ready to punk on last time",
+            "aglity":"200",
+            "health":"1",
+            "strength":"200"
+
+        },
+        {
+            "name":"yellow mage ",
+            "type": "0",
+            "room_id":"Level 1 Stairway",
+            "description":"a Yellow mage is worshiping and channeling the blood magic of the old god of destruction, beware.",
+            "aglity":"300",
+            "health":"80",
+            "strength":"140"
+
+        },
+        {
+            "name":"Maggots",
+            "type": "0",
+            "room_id":"Closet",
+            "description":"disgusting green maggots crawl onto your feet ",
+            "aglity":"300",
+            "health":"30",
+            "strength":"20"
 
         }
     ]
