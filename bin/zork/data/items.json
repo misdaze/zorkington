@@ -1,96 +1,98 @@
 {
     "items":[
         {
+        "itemtype":"Weapon",
+        "weaponType":"Shortsword",
         "id": "shortsword",
         "name": "Shortsword",
         "description": "A small, damaged sword. Gets the job done.",
         "room_id":"Courtyard",
         "weight":"5",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Greatsword",
         "id": "longsword",
         "name": "Longsword",
         "description": "A long iron sword. The balance of the blade feels good.",
         "room_id":"Hallway",
         "weight":"15",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Spear",
         "id": "ironspear",
         "name": "Iron Spear",
         "description": "A long iron spear.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"7",
+        "isOpenable":"false"
         },
         {
-        "id": "shortbow",
-        "name": "Short Bow",
-        "description": "A compact and lightweight bow.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
-        },
-        {
+        "itemtype":"Weapon",
+        "weaponType":"Shortsword",   
         "id": "scimitar",
         "name": "Scimitar",
         "description": "A short curved sword capable of causing deep slash wounds.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"7",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Blunt",
         "id": "ironmace",
         "name": "Iron Mace",
         "description": "A small, rusty iron mace capable of staggering those hit by it.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"8",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Knife",
         "id": "cleaver",
         "name": "Cleaver",
         "description": "A short, rusty meat cleaver. Weak but intimidating.",
         "item_id":"drawer1",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"3",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Blunt",
         "id": "morningstar",
         "name": "Morningstar",
         "description": "A large and heavy morningstar. Capable of staggering enemies and causing bleeding",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"17",
+        "isOpenable":"false"
         },
-        {        
+        { 
+        "itemtype":"Weapon",
+        "weaponType":"Misc",       
         "id": "boneshears",
         "name": "Bone Shears",
         "description": "Rusty scissors that are a little hard to use. Slow but capable of causing immense damage.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "room_id":"1Backyard",
+        "weight":"5",
+        "isOpenable":"false"
         },  
         {
+        "itemtype":"Weapon",
+        "weaponType":"Spear",
         "id": "ritualspear",
         "name": "Ritual Spear",
         "description": "A simple spear used by primitive tribes living underground.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"13",
+        "isOpenable":"false"
         },  
         {
+        "itemtype":"Weapon",
+        "weaponType":"Axe",
         "id": "axe",
         "name": "Axe",
         "description": "A typical multi-purpose hand axe.",
@@ -100,121 +102,119 @@
         "isCursable":"true"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Greatsword",
         "id": "sharktooth",
         "name": "Shark Teeth",
         "description": "A crude makeshift saw made from razor-sharp teeth.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"25",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Axe",
         "id": "warscythe",
         "name": "Shark Teeth",
         "description": "A large scythe. Capable of damaging multiple enemies at once.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"18",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+       "weaponType":"Greatsword",
         "id": "claymore",
         "name": "Claymore",
         "description": "A large two handed sword. Packs a punch.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"19",
+        "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Shortsword",
         "id": "easternsword",
         "name": "Eastern Sword",
         "description": "A delicate blade hailing from the far east. Sharp but fragile.",
         "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false",
-        "isCursable":"true"
+        "weight":"12",
+        "isOpenable":"false"
         },  
         {
+        "itemtype":"Weapon",
+        "weaponType":"Shortsword",
         "id": "bluesin",
         "name": "Blue Sin",
         "description": "A fine and light short sword with blue carvings on its hilt and blade.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"8",
         "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Blunt",
         "id": "skeleton",
         "name": "Skeletal Arm",
         "description": "An arm taken from a skeleton. Why would you want to use this?",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"3",
         "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Greatsword",
         "id": "crudesword",
         "name": "Crude Sword",
         "description": "A massive jagged longsword. How do you even hold this thing?",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"20",
         "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Spear",
         "id": "sergal",
         "name": "Sergal Spear",
         "description": "A heavy throwing spear used by sergal tribes from the west.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"15",
         "isOpenable":"false"
         },
         {
+        "itemtype":"Weapon",
+        "weaponType":"Greatsword",
         "id": "miasma",
         "name": "Miasma",
         "description": "An otherworldly sword that oozes toxic gases. The sword is said to house the strength of six men.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "room_id":"2BloodPit",
+        "weight":"30",
         "isOpenable":"false"
         },
 
 
         {
         "id": "tinder",
-        "name": "Tinderbox",
+        "name": "Firestarting Kit",
         "description": "A box full of firestarting tools. Fires keep fear in check and offer warmth and safety.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "item_id":"toolbox1",
+        "weight":"2",
         "isOpenable":"false"
         },
         {
         "id": "torch",
         "name": "Torch",
         "description": "A long stick wrapped with thick rags to prolong its burning.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "room_id":"Courtyard",
+        "weight":"4",
         "isOpenable":"false"
         },
         {
         "id": "luckycoin",
         "name": "Lucky Coin",
         "description": "A coin that can be used in dire situations. Flipping it and choosing heads or tails can greatly boost stats and luck.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "silver",
-        "name": "Silver Coin",
-        "description": "A silver coin. It's valuable on the surface, but you might be able to use it down here too.",
-        "item_id":"cabinet1",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "vial",
-        "name": "Vial",
-        "description": "A small glass vial, used for alchemy.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "room_id":"1HiddenBackyard",
+        "weight":"1",
         "isOpenable":"false"
         },
         {
@@ -222,7 +222,7 @@
         "name": "Potion of Healing",
         "description": "A miraculous concoction that heals your body completely.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"2",
         "isOpenable":"false"
         },
         {
@@ -230,7 +230,7 @@
         "name": "Potion of Sanity",
         "description": "A potion that recovers your sanity completely.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"2",
         "isOpenable":"false"
         },
         {
@@ -238,54 +238,30 @@
         "name": "Potion of Strength",
         "description": "A strong-smelling vial that strengthens your body.",
         "room_id":"cabinet1",
-        "weight":"10",  
+        "weight":"2",  
         "isOpenable":"false"
         },
         {        
-        "id": "",
-        "name": "Bone Shears",
-        "description": "Rusty scissors that are a little hard to use. Slow but capable of causing immense damage.",
-        "room_id":"Hallway",
+        "id": "talisman",
+        "name": "Purifying Talisman",
+        "description": "A paper talisman with markings that originate from Eastern Sanctuaries. Using it grants you immunity to the next attack.",
+        "room_id":"1Backyard",
         "weight":"10",
         "isOpenable":"false",
         "isCursable":"true"
         },  
         {
-        "id": "",
-        "name": "Ritual Spear",
-        "description": "A simple spear used by primitive tribes living underground.",
-        "room_id":"Hallway",
+        "id": "lantern",
+        "name": "Priest's Lantern",
+        "description": "A lantern from a dark priest. You can toss it at your enemies for a small fire attack.",
+        "room_id":"1Library",
         "weight":"10",
         "isOpenable":"false"
         },  
         {
-        "id": "",
-        "name": "Axe",
-        "description": "A typical multi-purpose hand axe.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "Csoul",
-        "name": "Soul Stone",
-        "description": "A smooth and round naturally formed gemstone.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "Bsoul",
-        "name": "Lesser Soul Stone",
-        "description": "A smooth, light gemstone. You can see tiny blue wisps moving within it.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "Asoul",
-        "name": "Ancient Soul Stone",
-        "description": "A surpisingly heavy gemstone. The inside radiates a faint blue light that swirls around.",
+        "id": "beartrap",
+        "name": "Bear Trap",
+        "description": "A strong trap that will cause severe damage.",
         "room_id":"Hallway",
         "weight":"10",
         "isOpenable":"false"
@@ -294,40 +270,16 @@
         "id": "bonesaw",
         "name": "Bone Saw",
         "description": "A rusty blood-stained bonesaw. Good for dealing with infections.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "item_id":"toolbox1",
+        "weight":"4",
         "isOpenable":"false"
         },  
         {
         "id": "skinner",
         "name": "Skinning Knife",
         "description": "A small knife used for skinning animals and other living creatures.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "gnomeegg",
-        "name": "Gnome Egg",
-        "description": "An egg found inside the cavemother's body.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "gnomemilk",
-        "name": "Gnome Milk",
-        "description": "A vial full of yellow colored gnome milk. Ew.",
-        "room_id":"Hallway",
-        "weight":"10",
-        "isOpenable":"false"
-        },
-        {
-        "id": "diamond",
-        "name": "Diamond",
-        "description": "A pure, radiant diamond chunk. Could be worth a lot outside of the dungeon.",
-        "room_id":"Hallway",
-        "weight":"10",
+        "item_id":"toolbox1",
+        "weight":"2",
         "isOpenable":"false"
         },
         {
@@ -335,10 +287,38 @@
         "name": "King's Crown",
         "description": "A golden crown with ornate enscriptions and jewels embedded all over. It must be worth fortunes.",
         "room_id":"Hallway",
-        "weight":"10",
+        "weight":"5",
         "isOpenable":"false"
         },
 
+
+        {
+        "id": "gnomeegg",
+        "name": "Gnome Egg",    
+        "description": "An egg found inside the cavemother's body.",
+        "room_id":"Hallway",
+        "weight":"2",
+        "isOpenable":"false"
+        },
+        {
+        "id": "gnomemilk",
+        "name": "Gnome Milk",
+        "description": "A vial full of yellow colored gnome milk. Ew.",
+        "room_id":"Hallway",
+        "weight":"3",
+        "isOpenable":"false"
+        },
+
+
+
+        {
+        "id": "gnomemilk",
+        "name": "Gnome Milk",
+        "description": "A vial full of yellow colored gnome milk. Ew.",
+        "room_id":"Hallway",
+        "weight":"3",
+        "isOpenable":"false"
+        },        
 
         {
         "id": "cabinet1",
@@ -355,8 +335,27 @@
         "room_id": "1kitchen",
         "weight":"10000",
         "isOpenable": "true"
+        },
+        {
+        "id": "toolbox1",
+        "name": "Rusty Toolbox",
+        "description": "A rusty handheld toolbox",
+        "room_id": "3Prison",
+        "weight":"10000",
+        "isOpenable": "true"
+        },
+        {
+        "id": "fancybox1",
+        "name": "Ornate Box",
+        "description": "A worn down box with elaborate golden details along a velvet surface. Probably owned by someone of high status.",
+        "room_id": "3Prison",
+        "weight":"10000",
+        "isOpenable": "true"
         }
+        
 
+
+        
 
 
     ]
