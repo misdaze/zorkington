@@ -23,8 +23,8 @@ public class Inventory {
 
   public void weaponInventory(){
     for(int i = 0; i < items.size(); i++)
-      if(){
-
+      if(items.get(i).equals()){
+        //remove item
     }
   }
 
