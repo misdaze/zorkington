@@ -43,9 +43,10 @@ public class Game {
       coordsort();
       initRooms("src\\zork\\data\\rooms.json");
       //initItems("src\\zork\\data\\items.json"); FIX UR INVENTORY / ITEM PARSER DRAKE AND RYAN!!!!!!!!!!!!!!!!
-      //initNPCs("src\\zork\\data\\NPC.json"); FIX UR NPC PARSER TING!!!! I CANT TEST THE GAME!!!! DAMN!!!!!!
-     // System.out.println(roomMap.get("Courtyard") + " t1");
+    
+     System.out.println(roomMap.get("Courtyard") + " t1");
       currentRoom = roomMap.get("Courtyard");
+       initNPCs("src\\zork\\data\\NPC.json");
       //System.out.println(currentRoom + " t2");
 
     } catch (Exception e) {
@@ -79,13 +80,6 @@ public class Game {
       Hostile hostile = new Hostile(name, description, health, aglity, strength);
       roomMap.get(roomId).addNPC(hostile);
     }
-
-    else {
-      Trader trader = new Trader(name, description);
-      roomMap.get(roomId).addNPC(trader);
-
-    }
-     
     }
   }
   private int[] coordsgetter(int map) throws IOException, ParseException{
@@ -215,15 +209,27 @@ public class Game {
     }
 
     String commandWord = command.getCommandWord();
+   
     if (commandWord.equals("help"))
       printHelp();
     else if (commandWord.equals("go")){
-      if (currentRoom.hasHostiles()){
-        System.out.println("The hostile won't let you leave.");
-      }else{
+   
+    if (currentRoom.hasHostiles() == true)
+    System.out.println("there is a Hostile in the room, you can't leave");
+      else{
         goRoom(command);
+        
       }
-    }else if (commandWord.equals("status"))
+    }
+    else if (commandWord.equals("fight")){
+      playerfight(currentRoom.Ghostile());
+    }
+
+    else if (commandWord.equals("look")){
+      HostileDescription(currentRoom.Ghostile());
+    }
+
+    else if (commandWord.equals("status"))
       stati(command);
       else if (commandWord.equals("map"))
       mappings();
@@ -354,24 +360,68 @@ public class Game {
  private void playerfight(Hostile hostile){
 
 int Hhealth = hostile.Rhealth();
+boolean block = false;
+
+
 
 while(Hhealth > 0 && healthPoints > 0){
+  
   int damage = hostile.fight();
-    if (damage > 0)
-    System.out.println(hostile.Rname() + "has smacked you");
+  
+  if(damage == 0)
+  System.out.println(hostile.Rname() + " has attacked you but missed!");
+
+  else if (block == true){
+    System.out.println("you have blocked " + hostile.Rname());
+      block = false;
+  }
+
+  else{
+    System.out.println(hostile.Rname() + " has smacked you ");
     healthPoints = healthPoints - damage;
+   
+  }
+ 
     // give options
     System.out.println("what would you like to do");
     System.out.println("1 to attack ");
     System.out.println("2 to block");
     int player = parser.getOption(1, 2);
-    // if (player = 1){
-    // s
-    
+
+      if (player == 1){
+        int playerD = 30;
+        System.out.println(" you have attacked " + hostile.Rname() );
+        Hhealth = Hhealth - playerD;
+      }
+
+      if (player == 2){
+        int playerB = (int)(Math.random() * 100) +1;
+
+        if (playerB >= 50){
+            block = true;
+        }
+        else 
+        System.out.println("you try to block but fail");
+      }
     }
+      if (Hhealth <= 0){
+      System.out.println(" you have killed" + hostile.Rname());
+        currentRoom.RemoveH();
+      }
+
+      else if (healthPoints <= 0){
+      System.out.println(" you've been killed loser ");
+       
+    }
+  }
+
+private void HostileDescription(Hostile hostile){
+if (currentRoom.hasHostiles()){
+  System.out.println(hostile.Rdescription());
 }
-
-
+else 
+System.out.println("there are no hostiles in this room");
+}
 
 
   /**
