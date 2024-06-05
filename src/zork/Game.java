@@ -220,7 +220,7 @@ public class Game {
   
   private void mappings() throws IOException, ParseException {
     //System.out.println(currentRoom);
-   // ArrayList<List> one = new ArrayList<List>();
+   // ArrayList<List> one = new ArrayList<List>(); 
    
     int id = currentRoom.getNum();
     int[] array = things.get(id-1);
