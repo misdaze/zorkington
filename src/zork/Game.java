@@ -250,6 +250,7 @@ public class Game {
    * Print out some help information. Here we print some stupid, cryptic message
    * and a list of the command words.
    */
+
   public ArrayList<int[]> things = new ArrayList<int[]>();
   private void coordsort() throws IOException, ParseException {
     for (int i = 0; i < 17; i++) {
@@ -266,6 +267,7 @@ public class Game {
     int id = currentRoom.getNum();
     int[] array = things.get(id-1);
     //System.out.println(array[0]);
+
     String dir = System.getProperty("user.dir");
     File file_open = new File(dir+"\\image.jpg");  
     Path copied = Paths.get(dir+"\\SACRIFICE.jpg");
