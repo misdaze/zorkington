@@ -29,7 +29,7 @@ public class Game {
   public static HashMap<String, Room> roomMap = new HashMap<String, Room>();
   private Parser parser;
   private Room currentRoom;
-  private int healthPoints = 100;
+  private int healthPoints = 250;
   private int hunger = 100;
   private int sanity = 100;
   private String wellbeingHunger = "Perfect";
@@ -425,6 +425,7 @@ while(Hhealth > 0 && healthPoints > 0){
 
       else if (healthPoints <= 0){
       System.out.println(" you've been killed loser ");
+        System.exit(0);
        
     }
   }
