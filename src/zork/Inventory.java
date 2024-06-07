@@ -21,12 +21,7 @@ public class Inventory {
     return currentWeight;
   }
 
-  public void weaponInventory(){
-    for(int i = 0; i < items.size(); i++)
-      if(items.get(i).equals()){
-        //remove item
-    }
-  }
+  
 
   public boolean addItem(Item item) {
     if (item.getWeight() + currentWeight <= maxWeight)
