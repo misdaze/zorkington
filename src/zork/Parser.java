@@ -11,7 +11,7 @@ public class Parser {
     in = new Scanner(System.in);
   }
 
-  public int getOption(int low, int high){
+  public int getOption(int low, int middle,  int high){
     while (true){
       String result = in.nextLine();
 

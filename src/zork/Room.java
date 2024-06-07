@@ -40,6 +40,7 @@ public boolean hasHostiles(){
   if (npcs.size() > 0){
     return true;
   }
+  else 
   return false;
 }
 

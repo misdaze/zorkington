@@ -15,6 +15,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import javax.imageio.ImageIO;
+import javax.print.attribute.standard.MediaSize.NA;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,6 +35,7 @@ public class Game {
   private int sanity = 100;
   private String wellbeingHunger = "Perfect";
   private String wellbeingSanity = "Perfect";
+  private boolean heal = false;
 
   /**
    * Create the game and initialise gits internal map.
@@ -179,7 +181,7 @@ public class Game {
       }
 
     }
-    System.out.println("Thank you for being freaky.  Good boy.");
+    System.out.println("Thank you for playing. :) ");
   }
 
   /**
@@ -212,20 +214,30 @@ public class Game {
    
     if (commandWord.equals("help"))
       printHelp();
+
+      else if (commandWord.equals("heal")){
+      playerHeal();
+      }
+
+      
     else if (commandWord.equals("go")){
    
     if (currentRoom.hasHostiles() == true)
     System.out.println("there is a Hostile in the room, you can't leave");
       else{
         goRoom(command);
-        
+        heal = false;
       }
     }
+
     else if (commandWord.equals("fight")){
       playerfight(currentRoom.Ghostile());
     }
 
     else if (commandWord.equals("look")){
+      if (currentRoom.hasHostiles() == false)
+      System.out.println("there are no hostiles in this room");
+      else
       HostileDescription(currentRoom.Ghostile());
     }
     else if (commandWord.equals("status"))
@@ -354,30 +366,113 @@ public class Game {
     else if (type.equals("sanity")){
       System.out.println("ur fine tough it out kid");
     }
+    else if (type.equals("health")){
+      System.out.println(healthPoints);
+    }
   }
 
+
+  private void playerHeal(){
+    if (heal == false){
+      int Healamount = (int)(Math.random() * 100) + 1; 
+      healthPoints += Healamount;
+      System.out.println(" with the kingdoms blessing you have healed  " + Healamount );
+      heal = true;
+    }
+
+    else if (heal == true){
+      System.out.println(" you need to rest before you can use your powers again ");
+    }
+
+  }
 
 
  private void playerfight(Hostile hostile){
 
 int Hhealth = hostile.Rhealth();
 boolean block = false;
-
+int punkingS = 0;
 
 
 while(Hhealth > 0 && healthPoints > 0){
   boolean mrbcrit = false;
+  boolean MochSlain = false;
+  boolean NardP = false;
+  boolean MrBHeal = false;
+  boolean BossKo = false;
+  boolean BossHeal = false;
+  boolean BossAttack = false;
   int damage = hostile.fight();
   String RED = "\u001B[31m";
   String RESET = "\u001B[0m";
+  String Blue = "\u001B[34m";
+  String Purple = "\u001B[45m";
+  String Yellow = "\u001B[43m";
+  String Green = "\u001B[42m";
+
+
   if (hostile.Rname().equals("Mr. B")){
-    int rng = (int)(Math.random()*5);
-    if (rng == 5){
+    int rng = (int)(Math.random()*5) + 1;
+    int HealRNG = (int)(Math.random() * 3) +1;
+
+    if (rng >= 3 ){
       mrbcrit = true;
+      System.out.println(" ");
       System.out.println(hostile.Rname() + " has a terrifying glint in his eye.");
+
+    }
+
+    else if (HealRNG <= 3){
+      MrBHeal = true;
+      System.out.println(hostile.Rname() + " pulls out a shiny " + Yellow + "trumpet" + RESET);
     }
   }
+
+  else if (hostile.Rname().equals("remains of Manocha")){
+    int rngMoch = (int)(Math.random()*2) + 1;
+    if (rngMoch == 2 ){
+      MochSlain = true;
+      System.out.println(hostile.Rname() + " mutters a " + Blue + "Ancient Verse" + RESET);
+    }
+  }
+
+  else if (hostile.Rname().equals("wandering nard")){
+    int rngNard = (int)(Math.random()*3) + 1;
+    if (rngNard == 2 ){
+      NardP = true;
+      System.out.println(" ");
+      System.out.println(hostile.Rname() + " dances around as he is preparing for something  " + Purple + " devious " + RESET);
+     
+    }
+
+  }
+
+  else if (hostile.Rname().equals("The old god of fear and hunger")){
+    int rngBossKo = (int)(Math.random()*10) + 1;
+    int rngBossHeal = (int)(Math.random()*5) + 1;
+    int rngBossAttack = (int)(Math.random()*5) + 1;
+    if (rngBossKo == 5 ){
+      BossKo = true;
+      System.out.println(" ");
+      System.out.println(Purple + hostile.Rname() + " prepares for its next strike, you feel the presence of death  " + RESET);
+    }
+
+    else if (rngBossHeal == 2 || rngBossHeal == 3 ){
+      BossHeal = true;
+      System.out.println(" ");
+      System.out.println(Green + hostile.Rname() + " begins to meditate as a white aura surrounds the beast " + RESET);
+    }
+
+    else if (rngBossAttack == 2 || rngBossAttack == 3 ){
+      BossAttack = true;
+      System.out.println(" ");
+      System.out.println(Yellow + hostile.Rname() + " enters a unknown fighting position, you should be careful " + RESET);
+    }
+
+
+  }
   
+
   if(damage == 0)
   System.out.println(hostile.Rname() + " has attacked you but missed!");
 
@@ -387,46 +482,173 @@ while(Hhealth > 0 && healthPoints > 0){
   }
 
   else{
+    System.out.println(" ");
     System.out.println(hostile.Rname() + " has smacked you ");
-    if (mrbcrit){
-      healthPoints = healthPoints - damage;
-      System.out.println("Mr. B has landed a" + RED + " critical hit! " + RESET + "You feel dread wash over you.");
+    
+    if (punkingS == 2){
+      System.out.println("With one last " + RED + " Punking Strike " + RESET + " The wandering Nard blows your head off clean. ");
+      System.out.println(" ");
+      System.out.println(RED + " you have been punked." + RESET);
+      System.exit(0);
     }
+
+    if (BossKo){
+      System.out.println(hostile.Rname() + " Strikes you with a cursed technique only known to the old gods. You collapse as your body slowly disintegrate");
+      System.out.println(" ");
+      System.out.println("all that is left of you is a small pile of ashes." + RED + "you have died" + RESET);
+      System.exit(0);
+    }
+
+    else if (BossHeal){
+      System.out.println("as " + hostile.Rname() + " meditates its wounds start to heal, with every second healing more " );
+     System.out.println(" ");
+     int heal = (int)(Math.random() * 100) + 1;
+     Hhealth += heal; 
+    }
+
+    else if (BossAttack){
+      System.out.println(hostile.Rname() + " attacks you with several strikes each strike different from the pervious. You try to dodge but its futile" );
+     System.out.println(" ");
+     int attack = (int)(Math.random() * 100) + 1;
+     healthPoints -= attack; 
+    }
+
+
+
+    if (mrbcrit){
+      System.out.println("Mr. B has landed a" + RED + " critical hit! " + RESET + "You feel dread wash over you.");
+      healthPoints -= 30;
+    }
+
+    else if (MrBHeal){
+      System.out.println(" ");
+        System.out.println("Mr. B starts dancing around while playing his Trumpet " + Green + "Mr. B heals 15 health" + RESET);
+        Hhealth += 10;
+        
+      
+      }
+
+    else if (MochSlain){
+      System.out.println(" ");
+      System.out.println("with one last strike the Remains of Manocha impales your soul, as you yell in terror your soul shatters. ");
+      System.out.println(" ");
+    System.out.println(RED +"you are now dead" + RESET);
+    System.exit(0);
+    }
+
+    else if (NardP){
+
+      System.out.println(" ");
+      System.out.println("The wandering Nard has landed a " + RED + " Punking Strike! " + RESET + "  You shiver uncontrollably");
+      
+      punkingS ++;
+
+    }
+
     healthPoints = healthPoints - damage;
    
   }
- 
+  
+
+
     // give options
     System.out.println("what would you like to do");
+    System.out.println(" ");
     System.out.println("1 to attack ");
-    System.out.println("2 to block");
-    int player = parser.getOption(1, 2);
+    System.out.println(" ");
+    System.out.println("2 to heal ");
+    System.out.println(" ");
+    System.out.println("3 to block");
+    int player = parser.getOption(1, 2, 3);
+ 
 
       if (player == 1){
-        int playerD = 30;
+        int playerD = 45;
+        System.out.println(" ");
         System.out.println(" you have attacked " + hostile.Rname() );
         Hhealth = Hhealth - playerD;
       }
 
       if (player == 2){
+        int Pheal = (int)(Math.random() * 100) + 1; 
+        healthPoints += Pheal;
+        System.out.println(" ");
+        System.out.println(" using magical skills you have healed " + Pheal);
+      }
+
+      if (player == 3){
         int playerB = (int)(Math.random() * 100) +1;
 
         if (playerB >= 50){
             block = true;
+            System.out.println(" ");
+            System.out.println("you brace yourself for " + hostile.Rname() + " next attack");
         }
-        else 
+
+        else if (playerB <= 50)
+        System.out.println(" ");
         System.out.println("you try to block but fail");
+        block = false;
       }
+
+
+      System.out.println(" ");
+      System.out.println("you have " + healthPoints + " health points");
+      System.out.println(hostile.Rname() + " has " + Hhealth + " health points");
+    
     }
+
+    
       if (Hhealth <= 0){
-      System.out.println(" you have killed " + hostile.Rname());
+        if (hostile.Rname().equals("The old god of fear and hunger")){
+          System.out.println("With one last blow you have slain the king of the dugeon, congrats you have conquered the dungeon of fear and hunger ");
+          System.out.println(" ");
+          System.out.println("you now may leave the dungeon of fear and hunger");
+          System.out.println(" ");
+          System.out.println("type quit to leave.");
+          System.out.println("or you can stick around ;)");
+          currentRoom.RemoveH();
+        }
+
+        else{
+        System.out.println(" ");
+      System.out.println(" you have slain " + hostile.Rname());
         currentRoom.RemoveH();
+        }
+        
+
+
+        
       }
 
       else if (healthPoints <= 0){
-      System.out.println(" you've been killed loser ");
+        int deathM = (int)(Math.random() * 100) + 1;
+        
+        if (deathM <= 20){
+     System.out.println("Your neck snaps from " + hostile.Rname() + " attack, you are now dead.");
+     System.exit(0);    
+    }
+
+     else if (deathM <= 40){
+     System.out.println(hostile.Rname() + " has ripped your arms off, blood gushes out as you start to lose vision. You have been killed ");
         System.exit(0);
-       
+     }
+
+     else if (deathM <= 60){
+      System.out.println("You feel your bones shatter as the " + hostile.Rname() + " jaw clamp down, tearing you limb from limb in a grotesque feast. What a tragic death" );
+         System.exit(0);
+      }
+
+      else if (deathM <= 80) {
+        System.out.println("you scream as " + hostile.Rname() + "  crushes your chest, rupturing organs and splintering bones. You die drowning in your own blood." );
+           System.exit(0);
+        }
+
+        else {
+          System.out.println(hostile.Rname() + " knocks you unconscious, you are then eaten alive");
+          System.exit(0);
+        }
+
     }
   }
 
@@ -434,8 +656,7 @@ private void HostileDescription(Hostile hostile){
 if (currentRoom.hasHostiles()){
   System.out.println(hostile.Rdescription());
 }
-else 
-System.out.println("there are no hostiles in this room");
+
 }
 
 

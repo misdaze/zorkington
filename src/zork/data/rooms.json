@@ -208,7 +208,7 @@
             "keyId": "3Basement"
           },
           {
-            "isLocked": true,
+            "isLocked": false,
             "direction": "east",
             "adjacentRoom": "Boss Room",
             "keyId": "3BossRoom"
@@ -228,7 +228,12 @@
         "name": "Boss Room",
         "description":  "A dark room full of tall columns. Strange artworks and writing is engraved in each wall. A tall, mangled creature sits upon a throne in the center of the arena. Before you even take a breath, it stands up and starts running towards you, blade in hand. It is time to face the king of the dungeon. There's also an egg next to the door but you probably have bigger concerns at the moment.",
         "exits":[
-
+          {
+            "isLocked": false,
+            "direction": "West",
+            "adjacentRoom": "Basement",
+            "keyId": "3Basement"
+          }
         ]
       },
       {

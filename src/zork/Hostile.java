@@ -34,7 +34,7 @@ public class Hostile {
         attacklanded = attacklanded += 0.3*agility;
 
     if (attacklanded >= 50){
-        int attackdamage = 10 + strength;
+        int attackdamage = 15 + strength;
       return attackdamage;
 
     }
