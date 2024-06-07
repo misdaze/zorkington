@@ -9,7 +9,7 @@ public class Room {
   private String description;
   private ArrayList<Exit> exits;
   private Inventory inventory;
-  private ArrayList<NPC> npcs;
+  private ArrayList<Hostile> npcs;
 
   
   public ArrayList<Exit> getExits() {
@@ -24,20 +24,26 @@ public class Room {
     this.exits = exits;
   }
 
-  public void addNPC(NPC npc){
+  public void addNPC(Hostile npc){
     npcs.add(npc);
   }
 
-  public boolean hasHostiles(){
-    if (npcs.size()>0){
-      for (NPC npc : npcs) {
-        if (npc instanceof Hostile)
-          return true;
-      }
-    }
-
-    return false;
+  public void RemoveH(){
+    npcs.remove(0);
   }
+ 
+public Hostile Ghostile(){
+  return npcs.get(0);
+}
+
+public boolean hasHostiles(){
+  if (npcs.size() > 0){
+    return true;
+  }
+  return false;
+}
+
+
 
   /**
    * Create a room described "description". Initially, it has no exits.
@@ -46,7 +52,7 @@ public class Room {
   public Room(String description) {
     this.description = description;
     exits = new ArrayList<Exit>();
-    npcs = new ArrayList<NPC>();
+    npcs = new ArrayList<Hostile>();
   }
 
   public Room() {
@@ -56,7 +62,7 @@ public class Room {
 
     inventory = new Inventory(Integer.MAX_VALUE);
 
-    npcs = new ArrayList<NPC>();
+    npcs = new ArrayList<Hostile>();
 
 
   }

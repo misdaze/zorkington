@@ -1,6 +1,6 @@
 package zork;
 
-public class Hostile extends NPC {
+public class Hostile {
     
     private String description; 
     private int health;
@@ -23,6 +23,10 @@ public class Hostile extends NPC {
 
     public int Rhealth(){
         return health;
+    }
+
+    public String Rdescription(){
+        return description;
     }
 
     public int fight(){
