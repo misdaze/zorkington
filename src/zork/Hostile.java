@@ -30,7 +30,7 @@ public class Hostile {
     }
 
     public int fight(){
-    int attacklanded = (int)(Math.random()*50)+1;
+    int attacklanded = (int)(Math.random()*50)+1; 
         attacklanded = attacklanded += 0.3*agility;
 
     if (attacklanded >= 50){

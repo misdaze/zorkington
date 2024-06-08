@@ -47,7 +47,7 @@ public class Game {
       //initItems("src\\zork\\data\\items.json"); FIX UR INVENTORY / ITEM PARSER DRAKE AND RYAN!!!!!!!!!!!!!!!!
     
      System.out.println(roomMap.get("Courtyard") + " t1");
-      currentRoom = roomMap.get("Courtyard");
+      currentRoom = roomMap.get("Boss Room");
        initNPCs("src\\zork\\data\\NPC.json");
       //System.out.println(currentRoom + " t2");
 
@@ -577,18 +577,8 @@ while(Hhealth > 0 && healthPoints > 0){
       }
 
       if (player == 3){
-        int playerB = (int)(Math.random() * 100) +1;
-
-        if (playerB >= 50){
-            block = true;
-            System.out.println(" ");
-            System.out.println("you brace yourself for " + hostile.Rname() + " next attack");
-        }
-
-        else if (playerB <= 50)
-        System.out.println(" ");
-        System.out.println("you try to block but fail");
-        block = false;
+        System.out.println(" you have blocked ");
+            block = true;           
       }
 
 
