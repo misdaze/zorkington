@@ -23,7 +23,7 @@ public class Room {
   public void setExits(ArrayList<Exit> exits) {
     this.exits = exits;
   }
-
+// adds npc 
   public void addNPC(Hostile npc){
     npcs.add(npc);
   }
@@ -32,10 +32,12 @@ public class Room {
     npcs.remove(0);
   }
  
+  //returns npc from list 
 public Hostile Ghostile(){
   return npcs.get(0);
 }
 
+//checks if there are any hostiles in the list 
 public boolean hasHostiles(){
   if (npcs.size() > 0){
     return true;

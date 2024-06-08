@@ -28,7 +28,7 @@ public class Hostile {
     public String Rdescription(){
         return description;
     }
-
+// fight method (determines if likely hood of a attack landing and the damage delt by the attack according to json )
     public int fight(){
     int attacklanded = (int)(Math.random()*50)+1; 
         attacklanded = attacklanded += 0.3*agility;

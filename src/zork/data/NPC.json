@@ -1,6 +1,7 @@
 {
     "npcs":[
         {
+
             "name":"Wolves",
             "type": "0",
             "room_id":"Courtyard",

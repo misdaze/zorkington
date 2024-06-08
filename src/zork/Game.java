@@ -47,7 +47,7 @@ public class Game {
       //initItems("src\\zork\\data\\items.json"); FIX UR INVENTORY / ITEM PARSER DRAKE AND RYAN!!!!!!!!!!!!!!!!
     
      System.out.println(roomMap.get("Courtyard") + " t1");
-      currentRoom = roomMap.get("Boss Room");
+      currentRoom = roomMap.get("Courtyard");
        initNPCs("src\\zork\\data\\NPC.json");
       //System.out.println(currentRoom + " t2");
 
@@ -58,7 +58,7 @@ public class Game {
 
   }
 
-
+//creates and adds all the NPC to rooms
   private void initNPCs(String fileName) throws Exception {
     Path path = Path.of(fileName);
     String jsonString = Files.readString(path);
@@ -84,6 +84,7 @@ public class Game {
     }
     }
   }
+
   private int[] coordsgetter(int map) throws IOException, ParseException{
     Path path = Path.of("src\\zork\\data\\rooms.json");
     String jsonString = Files.readString(path);
@@ -215,6 +216,7 @@ public class Game {
     if (commandWord.equals("help"))
       printHelp();
 
+      //heals player (only one use per a room)
       else if (commandWord.equals("heal")){
       playerHeal();
       }
@@ -222,6 +224,7 @@ public class Game {
       
     else if (commandWord.equals("go")){
    
+      //if there is a hostile in the room player won't be able to leave
     if (currentRoom.hasHostiles() == true)
     System.out.println("there is a Hostile in the room, you can't leave");
       else{
@@ -229,17 +232,19 @@ public class Game {
         heal = false;
       }
     }
-
+      //fights hostile in the room 
     else if (commandWord.equals("fight")){
       playerfight(currentRoom.Ghostile());
     }
 
+    //returns description of hostiles in the room if there are no hostiles returns message
     else if (commandWord.equals("look")){
       if (currentRoom.hasHostiles() == false)
       System.out.println("there are no hostiles in this room");
       else
       HostileDescription(currentRoom.Ghostile());
     }
+
     else if (commandWord.equals("status"))
       stati(command);
       else if (commandWord.equals("map"))
@@ -372,6 +377,7 @@ public class Game {
   }
 
 
+  // player heal method heals player by random number between 1 and 100
   private void playerHeal(){
     if (heal == false){
       int Healamount = (int)(Math.random() * 100) + 1; 
@@ -387,13 +393,15 @@ public class Game {
   }
 
 
+
+  //player fight function takes hostile as paramtere
  private void playerfight(Hostile hostile){
 
 int Hhealth = hostile.Rhealth();
 boolean block = false;
 int punkingS = 0;
 
-
+//this while loop will keep running unit either the player dies or the hostile dies
 while(Hhealth > 0 && healthPoints > 0){
   boolean mrbcrit = false;
   boolean MochSlain = false;
@@ -410,7 +418,7 @@ while(Hhealth > 0 && healthPoints > 0){
   String Yellow = "\u001B[43m";
   String Green = "\u001B[42m";
 
-
+// special attacks (calculates the odds of a hostile using a special attack)
   if (hostile.Rname().equals("Mr. B")){
     int rng = (int)(Math.random()*5) + 1;
     int HealRNG = (int)(Math.random() * 3) +1;
@@ -469,13 +477,15 @@ while(Hhealth > 0 && healthPoints > 0){
       System.out.println(Yellow + hostile.Rname() + " enters a unknown fighting position, you should be careful " + RESET);
     }
 
-
+// end special attack
   }
   
-
+// returns if hostile missed or not
   if(damage == 0)
   System.out.println(hostile.Rname() + " has attacked you but missed!");
 
+
+  //if block is true no damage is taken from hostile
   else if (block == true){
     System.out.println("you have blocked " + hostile.Rname());
       block = false;
@@ -485,6 +495,7 @@ while(Hhealth > 0 && healthPoints > 0){
     System.out.println(" ");
     System.out.println(hostile.Rname() + " has smacked you ");
     
+    //hostile special attacks (what the actual special attacks do)
     if (punkingS == 2){
       System.out.println("With one last " + RED + " Punking Strike " + RESET + " The wandering Nard blows your head off clean. ");
       System.out.println(" ");
@@ -544,7 +555,10 @@ while(Hhealth > 0 && healthPoints > 0){
       punkingS ++;
 
     }
+    //end of special attack
 
+
+    //deals the damage to the player
     healthPoints = healthPoints - damage;
    
   }
@@ -561,34 +575,34 @@ while(Hhealth > 0 && healthPoints > 0){
     System.out.println("3 to block");
     int player = parser.getOption(1, 2, 3);
  
-
+// deals damage to hostile
       if (player == 1){
         int playerD = 45;
         System.out.println(" ");
         System.out.println(" you have attacked " + hostile.Rname() );
         Hhealth = Hhealth - playerD;
       }
-
+// heals player from a random number from 1 to 100
       if (player == 2){
         int Pheal = (int)(Math.random() * 100) + 1; 
         healthPoints += Pheal;
         System.out.println(" ");
         System.out.println(" using magical skills you have healed " + Pheal);
       }
-
+//blocks next landed hostile attack 
       if (player == 3){
         System.out.println(" you have blocked ");
             block = true;           
       }
 
-
+      //displays health of player and hostile after both player and hostile went 
       System.out.println(" ");
       System.out.println("you have " + healthPoints + " health points");
       System.out.println(hostile.Rname() + " has " + Hhealth + " health points");
     
     }
 
-    
+    // message that pops up after you killed hostile or the boss
       if (Hhealth <= 0){
         if (hostile.Rname().equals("The old god of fear and hunger")){
           System.out.println("With one last blow you have slain the king of the dugeon, congrats you have conquered the dungeon of fear and hunger ");
@@ -610,6 +624,7 @@ while(Hhealth > 0 && healthPoints > 0){
 
         
       }
+      //different death messages randomized 
 
       else if (healthPoints <= 0){
         int deathM = (int)(Math.random() * 100) + 1;
@@ -641,6 +656,8 @@ while(Hhealth > 0 && healthPoints > 0){
 
     }
   }
+
+  // histile description method returns the description of the hostile in the room 
 
 private void HostileDescription(Hostile hostile){
 if (currentRoom.hasHostiles()){
